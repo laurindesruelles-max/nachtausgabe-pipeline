@@ -35,6 +35,12 @@ def title_panel():
     d.rectangle([(PW - w) / 2 - 30, 560, (PW + w) / 2 + 30, 640], fill=PAPER); d.text(((PW - w) / 2, 570), t, font=f2, fill=INK)
     return np.array(im)
 
+def _audiokit():
+    """Gemeinsames Ton-Werkzeug (Repo sound-mediathek/audiokit, setup.sh lädt es). Fehlt es, läuft der alte Weg weiter."""
+    d = os.environ.get("AUDIOKIT", "/home/claude/audiokit")
+    if not os.path.exists(f"{d}/adapter.py"): print("WARNUNG: audiokit fehlt – sh setup.sh ausführen"); return None
+    sys.path.insert(0, d); import adapter; return adapter
+
 def main(out_mp4, stills=None):
     order = list(range(1, EP.TITLE_AFTER + 1)) + ["T"] + list(range(EP.TITLE_AFTER + 1, EP.N_PANELS + 1))
     imgs = []
@@ -148,18 +154,26 @@ def main(out_mp4, stills=None):
     def sfx(name):
         if name not in cache: cache[name] = load_audio(f"{REPO}/assets/sfx/{name}.mp3")
         return cache[name]
+    _ev = []   # Geräusche erst sammeln, dann audiokit aufräumen lassen (Wiederholung, Dichte, defekte Dateien)
+    def _add(name, t, g, **kw): _ev.append((t, name, g, kw))
     for i, s in enumerate(shots):
         if s["k"] == "T":
-            mix_into(buf, sfx("logo-reveal-01"), s["start"] - 0.1, 0.45); mix_into(buf, sfx("cinematic-boom-01"), s["start"] + 0.05, 0.45); continue
+            _add("logo-reveal-01", s["start"] - 0.1, 0.45); _add("cinematic-boom-01", s["start"] + 0.05, 0.45); continue
         for name, at, g in P[s["k"]]["sfx"]:
-            mix_into(buf, sfx(name), s["v0"] + at, g * 0.5, fade_out=0.15)
+            _add(name, s["v0"] + at, g * 0.5, fade_out=0.15)
         if P[s["k"]].get("rain"):
-            mix_into(buf, sfx("ambience-rain-03"), s["start"] - 0.2, 0.2, fade_in=0.4, fade_out=0.5, max_len=min(s["end"] - s["start"] + 0.6, 9.2))
+            _add("ambience-rain-03", s["start"] - 0.2, 0.2, fade_in=0.4, fade_out=0.5, max_len=min(s["end"] - s["start"] + 0.6, 9.2))
         if s["k"] in CHAPTERS:
-            mix_into(buf, sfx("cinematic-boom-01"), s["start"] + 0.1, float(os.environ.get("CH_BOOM", "0.18")))
+            _add("cinematic-boom-01", s["start"] + 0.1, float(os.environ.get("CH_BOOM", "0.18")))
         if i + 1 < len(shots):
-            if page_of(s["k"]) != page_of(shots[i + 1]["k"]): mix_into(buf, sfx("paper-fabric-card-flip-06"), s["end"] + 0.15, 0.55)
-            else: mix_into(buf, sfx("short-video-whoosh-01"), s["end"] + 0.05, 0.12)
+            if page_of(s["k"]) != page_of(shots[i + 1]["k"]): _add("paper-fabric-card-flip-06", s["end"] + 0.15, 0.55)
+            else: _add("short-video-whoosh-01", s["end"] + 0.05, 0.12)
+    AK0 = _audiokit()
+    kw_of = {}
+    evs = [(t, n, g) for t, n, g, kw in _ev]
+    for t, n, g, kw in _ev: kw_of[(round(t, 4), n)] = kw
+    if AK0 is not None: evs = AK0.clean_events(evs, "nachtausgabe", f"{REPO}/assets/sfx")
+    for t, n, g in evs: mix_into(buf, sfx(n), t, g, **kw_of.get((round(t, 4), n), {}))
     # Musik je Kapitel, mit Pause beim Wechsel und vor dem Wendepunkt
     tracks = json.loads(os.environ["TRACKS"]) if os.environ.get("TRACKS") else {1: "noir_1_einstieg", 2: "noir_2_aufstieg", 3: "noir_3_jagd", 4: "noir_4_prozess", 5: "noir_5_ende"}
     tracks = {int(k): v for k, v in tracks.items()}
@@ -167,6 +181,22 @@ def main(out_mp4, stills=None):
     np.save(f"{ROOT}/stem_voice_sfx.npy", buf[:int(T_END * SR)])
     marks = music_marks + [(T_END, None)]
     music = np.zeros_like(buf)
+    AK = _audiokit()
+    if AK is not None:
+        # audiokit (18.11.2026): innerhalb eines Kapitels wechselt die Musik spätestens alle ~80 s auf eine andere Stelle
+        # des Stücks bzw. das Zweitstück – vor Stempeln/Wendepunkt gezielt eine kräftige Stelle. Kein Stopp, keine Pause
+        # (Laurin 18.11.). Lautstärke-Kurve, Anschwellen und Ducking bleiben unten genau wie abgenommen.
+        from dramaturgie import Dramaturgie
+        alt = {1: 3, 2: 3, 3: 2, 4: 3, 5: 4}
+        mp = lambda tr: f"{REPO}/assets/music/{tracks[tr]}.mp3"
+        stamps = [o.t0 for o in overlays if o.kind == "stamp"]
+        tw = [s["v1"] for s in shots if s["k"] == getattr(EP, "TWIST", None)]
+        d = Dramaturgie("nachtausgabe", T_END, [(t0, "k" if i else None) for i, (t0, _) in enumerate(marks[:-1])], [],
+                        [(t, "stempel", 3) for t in stamps] + [(t, "wendepunkt", 4) for t in tw])
+        music = d.music_bed(N, SR, None, [[mp(tr), mp(alt.get(tr, tr))] for _, tr in marks[:-1]], xf=2.5, envelope=False, calibrate=False)
+        music *= 0.045 / max(float(np.sqrt(np.mean(music ** 2))), 1e-6)
+        AK.LOG.append("MUSIK   " + d.report([s["start"] for s in shots])); print(AK.LOG[-1])
+        marks = []   # alter Ein-Stück-pro-Kapitel-Weg wird übersprungen
     for (t0, tr), (t1, _) in zip(marks[:-1], marks[1:]):
         m = load_audio(f"{REPO}/assets/music/{tracks[tr]}.mp3")
         # leise Anfänge/Enden weg (Fenster 0,25 s unter -32 dB)
@@ -221,6 +251,10 @@ def main(out_mp4, stills=None):
     raw = buf[:int(T_END * SR)].astype(np.float32).tobytes()
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-", "-af", "loudnorm=I=-14:TP=-1.5", f"{ROOT}/full_a.wav"], input=raw)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{ROOT}/full_v.mp4", "-i", f"{ROOT}/full_a.wav", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", out_mp4])
+    if AK0 is not None:
+        import scipy.io.wavfile as _wf
+        _wf.write(f"{ROOT}/_v.wav", SR, voice[:int(T_END * SR)].astype(np.float32)); _wf.write(f"{ROOT}/_m.wav", SR, (music * (g * duck)[:, None])[:int(T_END * SR)].astype(np.float32))
+        AK0.final_check(f"{ROOT}/full_a.wav", f"{ROOT}/_v.wav", f"{ROOT}/_m.wav"); AK0.write_report(f"{ROOT}/ton_bericht.txt")
     # Kapitelmarken für die Beschreibung
     with open(f"{ROOT}/kapitel.txt", "w") as fh:
         fh.write(f"0:00 {getattr(EP, 'FIRST_CHAPTER_LABEL', 'Einstieg')}\n")
