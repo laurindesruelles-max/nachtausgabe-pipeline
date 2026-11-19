@@ -1,5 +1,7 @@
 # Geräusche (assets/sfx)
 
+**Update (Laurin 19.11.2026): Gemeinsame Sound-Bibliothek für alle Kanäle** – zusätzlich zu diesem Ordner dürfen alle Effekte aus `laurindesruelles-max/sound-bibliothek` genutzt werden, gefiltert nach dem Stilprofil des Kanals (README dort, `sk.py find … --channel <kanal>`). Musik bleibt kanal-eigen. Die Regel vom 17.11. („nur eigene Effekte“) gilt damit nicht mehr.
+
 Gesäubert: Hochpass 60 Hz, Anfangsstille entfernt, −20 LUFS. Nur passend zum Bild einsetzen.
 
 | Name | Zweck | Quelle | Lizenz |
