@@ -31,7 +31,7 @@ export WORK=/home/claude/na-work && sh setup.sh
 
 1. **Recherche** mit Primärquellen (Gerichtsakten, Behörden, Archive, seriöse Presse). Mindestens 6 Quellen.
 2. **Skript** `videos/NNN-slug/lines.py`: `LINES = {1: "...", ...}` – ein Satz/Gedanke = ein Panel (Ziel 60–70 Zeilen).
-   Aufbau: Einstieg ~15–18 Zeilen (Hook mit dem dramatischsten Moment, Wendung, Satz „… das ist die Geschichte der heutigen Nachtausgabe.“), dann 4 Kapitel, Ende mit Kommentar-Frage + „Abonniere den Kanal und aktiviere die Glocke. Bis zur nächsten Nacht.“
+   Aufbau: Einstieg ~15–18 Zeilen, max. 60–75 s (Hook mit dem dramatischsten Moment, Fall/Name in den ersten 5 s im Bild, offene Fragen + Versprechen – siehe LESSONS.md „Hook-Regeln“, Wendung, Satz „… das ist die Geschichte der heutigen Nachtausgabe.“), dann 4 Kapitel, Ende mit Kommentar-Frage + „Abonniere den Kanal und aktiviere die Glocke. Bis zur nächsten Nacht.“
    **Zahlen immer ausschreiben** („neunzehnhundertneunundzwanzig“), keine Abkürzungen, englische Namen sparsam.
 3. **Panels** mit Higgsfield `generate_image_batch` (Modell `gpt_image_2_6`, `aspect_ratio 16:9`, 0,25 Credits/Bild), höchstens 6 pro Aufruf (sonst Rate-Limit). Jeder Prompt beginnt mit:
    > Comic book panel, graphic novel noir style, bold black ink linework, heavy shadows, halftone dot shading, limited palette of black, off-white paper and a single warm amber-yellow accent color.
