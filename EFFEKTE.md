@@ -22,7 +22,7 @@ Gemeinsame Regeln: `HANDWERK.md`. Hier steht nur, was Nachtausgabe von den ander
 | Effekt | Was passiert | Wann | Status |
 | --- | --- | --- | --- |
 | Panel-Fahrt | Die Kamera springt von Panel zu Panel, jedes Panel hat Tiefe | durchgehend | steht |
-| Regen, Schnee, Rauch | Wetter und Rauch bewegen sich im Panel | wo es im Bild passt | steht |
+| Regen, Schnee, Rauch | Wetter und Rauch bewegen sich im Panel | nur wo die Szene es verlangt, Regen ist kein Standard (Laurin 20.11.2026) | steht |
 | Flackernde Lampe | Laterne oder Neonschild flackert | Nacht, Spannung | steht |
 | Blitzlicht | Ein Kamerablitz der Polizei friert das Panel ein | Tatort, Verhaftung | steht |
 | Extrablatt | Titelseite rotiert aus der Druckerpresse, die Schlagzeile ist der Kapiteltitel | Kapitelstart | neu, ersetzt die Kapitelkarte, Stilprobe 20.11. |

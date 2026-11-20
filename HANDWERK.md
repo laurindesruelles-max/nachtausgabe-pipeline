@@ -16,6 +16,7 @@ Quelle: Claude-Doc „Kanal-Handschriften“ https://claude.ai/artifact/UGsg2WZK
 - **Durchgehend animiert:** Von der ersten bis zur letzten Sekunde bleibt der Zuschauer in der animierten Welt des Kanals. Fotos, Clips und Grafiken erscheinen nur innerhalb dieser Welt, nie als nacktes Standbild mit Zoom.
 - **Jeder Absatz hat ein Bild-Ereignis.** Kein Bild steht länger als ~5 s ohne Eigenbewegung, geschnitten wird alle 3–5 s. Das sind mindestens 12 Bild-Ereignisse pro Minute, und das wird gemessen.
 - **Nur Effekte aus der `EFFEKTE.md` des Kanals.** Neue Effekte erst nach Laurins Freigabe.
+- **Wetter nicht als Standard** (Laurin, 20.11.2026): Regen, Schnee oder Nebel nur, wenn Geschichte oder Ort es verlangen, nicht in jedem Video und nicht als Dauer-Atmosphäre. Bewegung im Bild kommt aus Handlung, Licht, Fahrzeugen und Menschen.
 - **Kein Bild kommt zweimal vor.** Günstige Bewegung: Blender, eigene Motion-Grafik, Pixabay. KI-Videoclips nur mit Laurins Freigabe.
 
 ## Ton
