@@ -24,6 +24,13 @@ Quelle: Claude-Doc „Kanal-Handschriften“ https://claude.ai/artifact/UGsg2WZK
 - **Effekte nur aus dem abgenommenen Sound-Kit des Kanals** (`SOUNDS.md`). Geräusche nur passend zum Bild, kein Rauschen als Füller.
 - **Musik:** 5–7 eigene Tracks je Kanal, erzeugt mit ElevenLabs Music über Higgsfield (keine anderen Higgsfield-Musikmodelle). Keine epische Musik. Die Musik baut gezielt Spannung auf, wie genau, legt der Kanal fest.
 - **Sound-Plan vor dem Mischen** (Laurin, 20.11.2026): Erst festlegen, wo überhaupt ein Sound hingehört und wie viele es sind. Jeder Sound sitzt auf einem echten Bild-Ereignis, im Zweifel weniger. Vor großen Momenten setzt die Musik kurz aus (außer bei Nachtausgabe), die Enthüllung bekommt einen trockenen tiefen Treffer statt Funkel- oder Zaubertönen.
+- **Musik atmet wie bei fern** (Laurin, 20.11.2026): Sie läuft nicht gleich laut durch.
+  - Unter der Stimme ~9 dB leiser (Ducking), in Sprechpausen voller.
+  - Vor Enthüllungen und Wendepunkten schwillt sie an (+4–6 dB über ~2,5 s).
+  - Vor großen Sätzen kurz weg (0,5–1,5 s Stille), dann setzt sie mit dem Treffer wieder ein. Ausnahme Nachtausgabe: keine Pausen, nur Anschwellen.
+  - Ein Track pro Kapitel, 2 s Überblendung, kein Track-Hopping.
+  - Prüfung mit earshot: Musik in mindestens 60 % der 5-s-Fenster, die lautesten 3 s mindestens 3,5 LU über dem Durchschnitt.
+  - Umsetzung je Engine: Unterbau `unterbau.py` (duck_db, swell, rests), Goldsmith `mix_full.py` (sidechain, beats), Nachtausgabe `render.py`, Denkmuster `kit.py`, Meisterwerk audiokit (`ak_music`). Stilproben: `engine/stilproben/mixer.py`.
 - **Master:** −14 LUFS, True Peak −2 dB.
 
 ## Stimme
