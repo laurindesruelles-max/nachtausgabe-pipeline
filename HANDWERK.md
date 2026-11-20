@@ -22,6 +22,7 @@ Quelle: Claude-Doc „Kanal-Handschriften“ https://claude.ai/artifact/UGsg2WZK
 - **Skill `doku-ohren` ist Pflicht:** Casting jedes Sounds, Effektspur, Endmix „launch-grade“ mit 0 major, Gemini hört die Vorschau.
 - **Effekte nur aus dem abgenommenen Sound-Kit des Kanals** (`SOUNDS.md`). Geräusche nur passend zum Bild, kein Rauschen als Füller.
 - **Musik:** 5–7 eigene Tracks je Kanal, erzeugt mit ElevenLabs Music über Higgsfield (keine anderen Higgsfield-Musikmodelle). Keine epische Musik. Die Musik baut gezielt Spannung auf, wie genau, legt der Kanal fest.
+- **Sound-Plan vor dem Mischen** (Laurin, 20.11.2026): Erst festlegen, wo überhaupt ein Sound hingehört und wie viele es sind. Jeder Sound sitzt auf einem echten Bild-Ereignis, im Zweifel weniger. Vor großen Momenten setzt die Musik kurz aus (außer bei Nachtausgabe), die Enthüllung bekommt einen trockenen tiefen Treffer statt Funkel- oder Zaubertönen.
 - **Master:** −14 LUFS, True Peak −2 dB.
 
 ## Stimme

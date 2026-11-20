@@ -40,3 +40,18 @@ Gemeinsame Regeln: `HANDWERK.md`. Hier steht nur, was Nachtausgabe von den ander
 **Raus:** der Stempel bei Enthüllungen (ab jetzt Schlagzeile).
 
 Stilproben: `stilprobe_nachtausgabe.mp4` (bildfüllend) und `stilprobe_nachtausgabe_mitte.mp4` (gewählte Richtung), beide vom 20.11.2026. Sounds folgen nach dem Casting (`doku-ohren`).
+
+## Sound je Effekt (Stand 20.11.2026, von Laurin abgenommen („war gut“, 20.11.2026))
+Geplant nach dem Grundsatz aus `HANDWERK.md`: erst festlegen, wo überhaupt ein Sound hingehört, dann je Stelle genau einen. Skripte: `engine/stilproben/ton_*.py`.
+
+| Effekt | Sound |
+| --- | --- |
+| Extrablatt | Druckmaschine (machine_engine, Bibliothek) leise + Whoosh + Umblättern + leiser cinematic-boom |
+| Fahndungsplakat | paper-fabric-card-flip-06 + reveal-impact-01 |
+| Taschenlampe | lighter-flick-01, Fund: scroll-unroll-01 |
+| Panel zerbricht | glass-clink-01 (Riss) + glass_shatter_01 (Bibliothek), danach Regen nur im Regen-Panel |
+| Zeitsprung-Uhr | clock_tick |
+| Schlagzeile knallt | impact-slam-35 + reveal-impact-01 + cinematic-boom-01, Musik schwillt davor an |
+| Seite umblättern | paper-fabric-card-flip-06 |
+| Panel-Fahrt | short-video-whoosh-01 sehr leise |
+| Musik | noir_3_jagd ab 0:30 (Anfang zu leise), durchgehend, Anschwellen vor Enthüllungen |
