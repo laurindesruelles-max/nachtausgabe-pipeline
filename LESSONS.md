@@ -1,5 +1,8 @@
 # Laurins Regeln für Nachtausgabe (verbindlich)
 
+> **Seit 20.11.2026 zuerst lesen:** `HANDWERK.md` (Regeln für alle Kanäle) und `EFFEKTE.md` (Handschrift und erlaubte Effekte dieses Kanals, von Laurin abgenommen). Bei Widerspruch gelten diese beiden Dateien.
+
+
 ## Kanal
 - Deutsch, Kriminalfälle **aus aller Welt** – Mord, Mafia/organisierte Kriminalität, Coups, Betrug, Ungelöstes.
 - Darf Goldsmith (englisch, dunkle 2,5D-Ermittlungsakte, Pinnwand, Polaroids, Miniatur-Dioramen) **optisch nicht ähneln**.
