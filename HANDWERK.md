@@ -5,11 +5,11 @@ Messlatte: fern, Simplicissimus, große Netflix-Dokus. **Ziel: mindestens 60 % d
 Quelle: Claude-Doc „Kanal-Handschriften“ https://claude.ai/artifact/UGsg2WZKdDs1vB93mWaGTZ
 
 ## Skript
-- **Du als Hauptfigur:** Der Zuschauer steckt selbst in der Geschichte.
+- **Du-Bezug, wo er trägt:** Der Zuschauer soll merken, was das Thema mit ihm zu tun hat. Ein Video muss aber nicht beim Zuschauer starten (Laurin, 20.11.2026).
 - **Spannungslinie ab Minute 1:** eine offene Frage oder ein Countdown. Die Auflösung kommt erst spät.
 - **Höchstens eine harte Zahl alle ~20 s.** Ein Beispiel wird ausführlich als Szene erzählt, statt vieles aufzuzählen.
 - **2–3 echte Wendungen** pro Video, der Satzrhythmus wechselt.
-- **Hook** nach den kanal-eigenen Hook-Regeln in der `LESSONS.md`.
+- **Hook: für alle Kanäle dieselbe Messlatte, nämlich der stärkste Hook.** Die Hook-Art muss sich je Kanal nicht unterscheiden. Die Kanäle unterscheiden sich durch Nische und Darstellung. Gemeinsam ist das Ziel: jedes Video klingt sehr gut, bleibt über die ganze Länge spannend und wird gern geschaut (Laurin, 20.11.2026). Bewährte Hook-Mittel: Kaltstart mitten in der stärksten Szene, offene Frage oder Neugier-Lücke, Konflikt oder Verlust, Geheimnis oder Insiderwissen, und das Versprechen, was der Zuschauer am Ende weiß. Ein Hook muss in den ersten 5 Sekunden klar sein, Bild, Satz und Ton sagen dasselbe. Die Ausreißer-Erkenntnisse in `LESSONS.md` bleiben als Ideen erhalten.
 - **Unabhängiger Faktencheck** (Agent) vor dem Einsprechen.
 
 ## Bild
