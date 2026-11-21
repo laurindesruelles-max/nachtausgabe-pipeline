@@ -15,9 +15,30 @@ Quelle: Claude-Doc „Kanal-Handschriften“ https://claude.ai/artifact/UGsg2WZK
 ## Bild
 - **Durchgehend animiert:** Von der ersten bis zur letzten Sekunde bleibt der Zuschauer in der animierten Welt des Kanals. Fotos, Clips und Grafiken erscheinen nur innerhalb dieser Welt, nie als nacktes Standbild mit Zoom.
 - **Jeder Absatz hat ein Bild-Ereignis.** Kein Bild steht länger als ~5 s ohne Eigenbewegung, geschnitten wird alle 3–5 s. Das sind mindestens 12 Bild-Ereignisse pro Minute, und das wird gemessen.
-- **Nur Effekte aus der `EFFEKTE.md` des Kanals.** Neue Effekte erst nach Laurins Freigabe.
+- **Nur Effekte aus `EFFEKTE.md` und `ANIMATION.md` des Kanals.** `ANIMATION.md` enthält alle für die Nische freigegebenen Animationsarten (Laurin, 21.11.2026: alles außer Higgsfield-Videoclips). Weitere Effekte erst nach Laurins Freigabe.
 - **Wetter nicht als Standard** (Laurin, 20.11.2026): Regen, Schnee oder Nebel nur, wenn Geschichte oder Ort es verlangen, nicht in jedem Video und nicht als Dauer-Atmosphäre. Bewegung im Bild kommt aus Handlung, Licht, Fahrzeugen und Menschen.
 - **Kein Bild kommt zweimal vor.** Günstige Bewegung: Blender, eigene Motion-Grafik, Pixabay. KI-Videoclips nur mit Laurins Freigabe.
+
+## Bild-Drehbuch: Darstellung von Zeit und Geschehen (Laurin, 21.11.2026)
+Jedes Skript bekommt **vor dem Einsprechen** ein Bild-Drehbuch (`videos/NNN-slug/bilddrehbuch.json`), das Satz für Satz festlegt, was im Bild passiert. Prüfung: `python3 engine/bilddrehbuch.py videos/NNN-slug/bilddrehbuch.json` – erst bei 0 Fehlern wird eingesprochen. Welche Animationen der Kanal dafür hat, steht in seiner `ANIMATION.md` (alles außer Higgsfield-Videoclips ist erlaubt, Laurin 21.11.2026).
+
+**Wie genau muss das Bild sein?** Je Satz eine Stufe wählen:
+- **exakt** – das Bild zeigt genau das Gesagte: das Jahr, die Uhrzeit, den Ort, die Zahl, den einen Moment der Handlung. Pflicht bei jeder Jahreszahl, Uhrzeit, harten Zahl und bei jedem Wendepunkt. Ungenauigkeit an diesen Stellen kostet Vertrauen und damit Zuschauer.
+- **schema** – das Bild zeigt den Ablauf vereinfacht (Kette, Diagramm, Explosionsansicht, Querschnitt). Pflicht bei Erklärungen: Wer nur Atmosphäre sieht, während etwas erklärt wird, steigt aus.
+- **stimmung** – Atmosphäre ohne Informationsauftrag. Nur für Übergänge und Atempausen, höchstens jede fünfte Einstellung.
+
+**Regeln, die Neugier und Spannung halten:**
+1. **Zeigen, nicht nennen:** Das Bild zeigt den *Moment der Veränderung* (die Tür geht auf, das Licht erlischt, der Stahl reißt), nicht den Zustand danach.
+2. **Zeit sichtbar machen:** Jeder Zeitsprung hat ein Bild-Signal (Uhr, Datum, Kalender, Tag/Nacht, Zeitraffer). Der Zuschauer weiß immer, *wann* er ist.
+3. **Ort sichtbar machen:** Jeder Ortswechsel hat ein Bild-Signal (Karte, Flug, Ortsmarke). Der Zuschauer weiß immer, *wo* er ist.
+4. **Neugier-Lücke im Bild:** Vor einer Auflösung wird das Entscheidende angedeutet, aber verdeckt gezeigt (abgedeckt, im Dunkeln, unscharf, halb gezeichnet). Aufgelöst wird frühestens 20 s später.
+5. **Immer eine offene Frage:** Ab Sekunde 30 bis eine Minute vor Schluss ist immer mindestens eine Frage offen. Wird eine beantwortet, öffnet sich im selben Moment die nächste.
+6. **Musterbruch:** In jedem 30-s-Fenster mindestens 3 verschiedene Animationsarten. Dieselbe Animation nie dreimal hintereinander.
+7. **Maßstab wechseln:** Zwischen Totale und Detail springen (Welt → Gebäude → Hand → Mikrometer). Gleiche Bildgröße länger als 15 s wirkt wie Stillstand.
+8. **Steigerung:** Die stärksten Animationen sitzen an den Wendepunkten und vor der Auflösung, nicht alle im Intro.
+9. **Rückkehr zum Hook:** Am Ende jedes Kapitels kommt das Hook-Bild kurz verändert zurück und zeigt, wie nah wir der Antwort sind.
+
+Nach der Veröffentlichung: Fällt die Retention-Kurve an einer Stelle ab, im Bild-Drehbuch nachsehen, welche Regel dort verletzt war, und das in `LESSONS.md` festhalten.
 
 ## Ton
 - **Skill `doku-ohren` ist Pflicht:** Casting jedes Sounds, Effektspur, Endmix „launch-grade“ mit 0 major, Gemini hört die Vorschau.
