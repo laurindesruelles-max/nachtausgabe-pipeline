@@ -66,19 +66,38 @@ def main(out_mp4, stills=None):
             t = end
         if len(shots) < len(order):
             nxt = order[len(shots)]
-            t += 0.55 if page_of(shots[-1]["k"]) == page_of(nxt) else 0.95
+            t += 0.55 if page_of(shots[-1]["k"]) == page_of(nxt) else float(getattr(EP, "FLIP_GAP", 1.25))
     T_END = t + 4.0
     print("Länge:", round(T_END, 1), "s =", int(T_END // 60), "min", int(T_END % 60), "s")
+    json.dump([{k_: v_ for k_, v_ in x.items()} for x in shots], open(f"{ROOT}/shots.json", "w"))
 
     overlays = []
     for s in shots:
         if s["k"] == "T": continue
         for kind, a, b, kw in P[s["k"]]["ov"]:
+            if kind == "wanted":
+                im_ = imgs[slot[s["k"]]]; x0_, y0_, x1_, y1_ = kw["crop"]
+                kw = dict(kw, face=np.ascontiguousarray(im_[int(y0_ * PH):int(y1_ * PH), int(x0_ * PW):int(x1_ * PW)]))
             overlays.append(Overlay(kind, s["v0"] + a, (s["v0"] + b) if b else s["end"] - 0.05, **kw))
         if s["k"] in CHAPTERS:
             n, ti, _ = CHAPTERS[s["k"]]
-            overlays.append(Overlay("chapter", s["start"] + 0.1, s["v0"] - 0.1, num=n, title=ti))
-    stamps = [o.t0 + 0.14 for o in overlays if o.kind == "stamp"]
+            if getattr(EP, "EXTRABLATT", True):   # Extrablatt aus der Druckerpresse ersetzt die Kapitelkarte (20.11.2026)
+                overlays.append(Overlay("extrablatt", s["start"] - 0.25, s["v0"] - 0.05, num=n, title=ti, line=getattr(EP, "EXTRA_LINE", "EXTRABLATT")))
+            else:
+                overlays.append(Overlay("chapter", s["start"] + 0.1, s["v0"] - 0.1, num=n, title=ti))
+    # Effekte mit Zeitbezug (Taschenlampe, Panel zerbricht) an die Shot-Zeiten binden
+    order_k = [x["k"] for x in shots]
+    for i_, s in enumerate(shots):
+        if s["k"] == "T": continue
+        new = []
+        for e in P[s["k"]]["fx"]:
+            if e["type"] == "flashlight": e = dict(e, t0=s["v0"] + e.get("a", 0.0))
+            elif e["type"] == "shatter":
+                pk = order_k[i_ - 1]
+                e = dict(e, t0=s["start"] + e.get("a", -0.2), prev=imgs[slot[pk]])
+            new.append(e)
+        P[s["k"]] = dict(P[s["k"]], fx=new)
+    stamps = [o.t0 + 0.14 for o in overlays if o.kind in ("stamp", "headline")]
 
     def view_of(s, z=0.0):
         return panel_view(rects[slot[s["k"]]], z, (0, 0) if s["k"] == "T" else P[s["k"]]["drift"])
@@ -102,8 +121,17 @@ def main(out_mp4, stills=None):
     vign = np.clip(1 - 0.35 * (((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2) ** 1.4, 0.55, 1)[..., None]
     fx_of = {slot[k]: P[k]["fx"] for k in P}
 
+    flips = []
+    for i_ in range(len(shots) - 1):
+        if page_of(shots[i_]["k"]) != page_of(shots[i_ + 1]["k"]): flips.append((shots[i_]["end"], shots[i_ + 1]["start"], i_))
     def frame_at(t, fi=0):
-        cx, cy, s = camera(t)
+        for a_, b_, i_ in flips:   # Seite umblättern (bildfüllend, gehört nur Nachtausgabe)
+            if a_ < t < b_:
+                fa = base_frame(t, fi, view_of(shots[i_], 0.07)); fb = base_frame(t, fi, view_of(shots[i_ + 1]))
+                return page_flip(fa, fb, (t - a_) / (b_ - a_))
+        return base_frame(t, fi, camera(t))
+    def base_frame(t, fi, cam):
+        cx, cy, s = cam
         cx += 5 * math.sin(t * 0.7) / s * 2; cy += 4 * math.sin(t * 0.9 + 1) / s * 2
         for st in stamps:
             d = t - st
@@ -163,11 +191,26 @@ def main(out_mp4, stills=None):
             _add(name, s["v0"] + at, g * 0.5, fade_out=0.15)
         if P[s["k"]].get("rain"):
             _add("ambience-rain-03", s["start"] - 0.2, 0.2, fade_in=0.4, fade_out=0.5, max_len=min(s["end"] - s["start"] + 0.6, 9.2))
-        if s["k"] in CHAPTERS:
+        if s["k"] in CHAPTERS and not getattr(EP, "EXTRABLATT", True):
             _add("cinematic-boom-01", s["start"] + 0.1, float(os.environ.get("CH_BOOM", "0.18")))
+        for e in P[s["k"]]["fx"]:   # Sound je Effekt (EFFEKTE.md, abgenommen 20.11.2026)
+            if e["type"] == "flashlight":
+                _add("lighter-flick-01", e["t0"], 0.22); _add("scroll-unroll-01", e["t0"] + e.get("dur", 3.0), 0.2)
+            elif e["type"] == "shatter":
+                _add("glass-clink-01", e["t0"] + 0.05, 0.14); _add("glass_shatter_01", e["t0"] + 0.6, 0.38)
         if i + 1 < len(shots):
             if page_of(s["k"]) != page_of(shots[i + 1]["k"]): _add("paper-fabric-card-flip-06", s["end"] + 0.15, 0.55)
             else: _add("short-video-whoosh-01", s["end"] + 0.05, 0.12)
+    for o in overlays:
+        if o.kind == "headline":
+            _add("impact-slam-35", o.t0, 0.7); _add("reveal-impact-01", o.t0 + 0.02, 0.45); _add("cinematic-boom-01", o.t0, 0.3)
+        elif o.kind == "wanted":
+            _add("paper-fabric-card-flip-06", o.t0, 0.3); _add("reveal-impact-01", o.t0 + 0.05, 0.25)
+        elif o.kind == "clock":
+            _add("clock_tick", o.t0 + 0.2, 0.2, fade_out=0.4, max_len=min(o.t1 - o.t0, 4.0))
+        elif o.kind == "extrablatt":
+            _add("machine_engine", o.t0, 0.12, fade_in=0.2, fade_out=0.6, max_len=2.6); _add("short-video-whoosh-01", o.t0 + 0.15, 0.22)
+            _add("paper-fabric-card-flip-06", o.t0 + 1.25, 0.35); _add("cinematic-boom-01", o.t0 + 1.3, 0.15)
     AK0 = _audiokit()
     kw_of = {}
     evs = [(t, n, g) for t, n, g, kw in _ev]
@@ -189,7 +232,7 @@ def main(out_mp4, stills=None):
         from dramaturgie import Dramaturgie
         alt = {1: 3, 2: 3, 3: 2, 4: 3, 5: 4}
         mp = lambda tr: f"{REPO}/assets/music/{tracks[tr]}.mp3"
-        stamps = [o.t0 for o in overlays if o.kind == "stamp"]
+        stamps = [o.t0 for o in overlays if o.kind in ("stamp", "headline")]
         tw = [s["v1"] for s in shots if s["k"] == getattr(EP, "TWIST", None)]
         d = Dramaturgie("nachtausgabe", T_END, [(t0, "k" if i else None) for i, (t0, _) in enumerate(marks[:-1])], [],
                         [(t, "stempel", 3) for t in stamps] + [(t, "wendepunkt", 4) for t in tw])
@@ -239,7 +282,7 @@ def main(out_mp4, stills=None):
     if s13:
         env(s13["start"] - 0.6, s13["start"], 1.0, 0.6); hold(s13["start"], s13["v1"] - 1.5, 0.6)
         env(s13["v1"] - 1.5, s13["v1"] + 0.5, 0.6, 1.35); env(s13["v1"] + 0.5, s13["v1"] + 3.0, 1.35, 1.0)
-    hits = sorted(set([o.t0 + 0.14 for o in overlays if o.kind == "stamp"] + [s["start"] + 0.1 for s in shots if s["k"] in CHAPTERS]))
+    hits = sorted(set([o.t0 + 0.14 for o in overlays if o.kind in ("stamp", "headline")] + [s["start"] + 0.1 for s in shots if s["k"] in CHAPTERS]))
     for h in hits:
         env(h - 1.8, h, 1.0, 1.45); env(h, h + 1.6, 1.45, 1.0)
     # Ducking: unter der Stimme etwas leiser, in Sprechpausen voller

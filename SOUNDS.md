@@ -36,3 +36,6 @@ Gesäubert: Hochpass 60 Hz, Anfangsstille entfernt, −20 LUFS. Nur passend zum 
 | scroll-unroll-01 | Buch/Papier aufschlagen | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
 | short-video-whoosh-01 | leiser Schwenk zwischen Panels | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
 | water-pour-10 | Flüssigkeit ausgießen | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
+| clock_tick | Zeitsprung-Uhr | sound-bibliothek (goldsmith: metronome-ticking-01) | CC0 |
+| glass_shatter_01 | Panel zerbricht | sound-bibliothek (SFXMint, Hugging Face flreey/sfxmint-cc0-sound-effects) | CC0 |
+| machine_engine | Extrablatt (Druckmaschine, leise) | sound-bibliothek (goldsmith: mechanical-engine-39) | CC0 |

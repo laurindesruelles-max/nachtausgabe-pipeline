@@ -128,6 +128,10 @@ def apply_fx(name, img, t, fx):
                 if 0 <= d < 0.35:
                     a = (1 - d / 0.35) ** 2 * 1.4
                     img = glow(img, (name, "flash", j), pos, 0.07, a, (255, 250, 235))
+        elif k == "flashlight":
+            img = flashlight_fx(img, t, e["t0"], e["path"], e.get("dur", 3.0))
+        elif k == "shatter":
+            img = shatter_fx(e["prev"], img, t, e["t0"])
         elif k == "breathe":
             v = 1 + e.get("amount", 0.05) * math.sin(t * e.get("speed", 1.5))
             img = np.clip(img.astype(np.float32) * v, 0, 255).astype(np.uint8)
@@ -189,6 +193,7 @@ class Overlay:
             s.img = bubble_img(kw["lines"])
     def draw(s, fr, t):
         if not (s.t0 <= t <= s.t1): return fr
+        if s.kind in ("headline", "wanted", "clock", "extrablatt"): return draw_new_overlay(s, fr, t)
         u_in = min((t - s.t0) / 0.22, 1); u_out = min((s.t1 - t) / 0.25, 1); al = max(min(u_in, u_out), 0)
         if s.kind in ("caption", "bubble"):
             sc = 0.75 + 0.25 * (1 - (1 - u_in) ** 3) + 0.05 * math.sin(u_in * math.pi)
@@ -301,3 +306,168 @@ RAIN = lambda a=0.5: {"type": "rain", "alpha": a}
 SNOW = lambda a=0.65: {"type": "snow", "alpha": a}
 FL = lambda ev: {"type": "flashes", "events": ev}
 
+
+
+# ======================= Neue Effekte (Stilprobe 20.11.2026, abgenommen) =======================
+# Extrablatt (Kapitelstart, bildfüllend), Schlagzeile knallt (ersetzt Stempel), Fahndungsplakat, Taschenlampe,
+# Panel zerbricht, Zeitsprung-Uhr, Seite umblättern (render.py). Vorlage: engine/stilproben/nachtausgabe(_mitte).py
+def _eo(u): u = min(max(u, 0), 1); return 1 - (1 - u) ** 3
+
+def extrablatt_img(head, sub, line="EXTRABLATT"):
+    fT = lambda s: ImageFont.truetype(FONT_TITLE, s); fC = lambda s: ImageFont.truetype(FONT_CAP, s)
+    im = Image.new("RGBA", (1500, 1000), PAPER + (255,)); d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, 1499, 999], outline=INK, width=10)
+    d.text((750, 70), "NACHTAUSGABE", font=fT(150), fill=INK, anchor="mt")
+    d.line([(60, 245), (1440, 245)], fill=INK, width=8); d.line([(60, 262), (1440, 262)], fill=INK, width=3)
+    d.text((750, 290), line, font=fC(46), fill=INK, anchor="mt")
+    s = 190
+    while s > 90 and fT(s).getlength(head) > 1380: s -= 6
+    d.text((750, 380 + (190 - s) // 2), head, font=fT(s), fill=INK, anchor="mt")
+    d.rectangle([60, 620, 1440, 640], fill=AMBER)
+    d.text((750, 680), sub, font=fC(58), fill=INK, anchor="mt")
+    for i in range(4):
+        for j in range(3):
+            d.rectangle([80 + i * 345, 790 + j * 60, 380 + i * 345, 815 + j * 60], fill=(150, 140, 120))
+    return np.array(im)
+
+def headline_img(text, size=170):
+    f = ImageFont.truetype(FONT_TITLE, size); w = int(f.getlength(text))
+    im = Image.new("RGBA", (w + 160, int(size * 1.43)), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    d.rectangle([14, 14, im.width - 1, im.height - 1], fill=(0, 0, 0, 255))
+    d.rectangle([0, 0, im.width - 15, im.height - 15], fill=PAPER + (255,), outline=INK + (255,), width=8)
+    d.text((80, int(size * 0.14)), text, font=f, fill=INK)
+    d.rectangle([0, 0, 40, im.height - 15], fill=AMBER + (255,))
+    return np.array(im)
+
+def wanted_img(face, header, name, year):
+    fT = lambda s: ImageFont.truetype(FONT_TITLE, s); fC = lambda s: ImageFont.truetype(FONT_CAP, s)
+    im = Image.new("RGBA", (620, 820), (226, 212, 176, 255)); d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, 619, 819], outline=INK, width=8)
+    s = 120
+    while s > 50 and fT(s).getlength(header) > 560: s -= 4
+    d.text((310, 40), header, font=fT(s), fill=INK, anchor="mt")
+    ph = Image.fromarray(face).resize((500, 280)).convert("L").convert("RGB")
+    im.paste(ph, (60, 200)); d.rectangle([60, 200, 560, 480], outline=INK, width=6)
+    s = 96
+    while s > 40 and fT(s).getlength(name) > 560: s -= 4
+    d.text((310, 520), name, font=fT(s), fill=INK, anchor="mt")
+    d.text((310, 660), year, font=fC(56), fill=INK, anchor="mt")
+    return np.array(im.rotate(-4, expand=True, resample=Image.BICUBIC))
+
+def clock_img(ang):
+    im = Image.new("RGBA", (420, 420), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    d.ellipse([10, 10, 410, 410], fill=PAPER + (255,), outline=INK + (255,), width=12)
+    for k in range(12):
+        a = k * math.pi / 6; d.line([(210 + 160 * math.sin(a), 210 - 160 * math.cos(a)), (210 + 185 * math.sin(a), 210 - 185 * math.cos(a))], fill=INK, width=8)
+    d.line([(210, 210), (210 + 150 * math.sin(ang), 210 - 150 * math.cos(ang))], fill=INK, width=12)
+    d.line([(210, 210), (210 + 100 * math.sin(ang / 12), 210 - 100 * math.cos(ang / 12))], fill=AMBER, width=16)
+    d.ellipse([195, 195, 225, 225], fill=INK)
+    return np.array(im)
+
+def flashlight_fx(img, t, t0, path, dur=3.0):
+    """Lichtkegel tastet das dunkle Panel ab (path: relative Punkte), bleibt am letzten Punkt (Fund)."""
+    h, w = img.shape[:2]
+    if t < t0: return np.clip(img * 0.18, 0, 255).astype(np.uint8)
+    u = _eo((t - t0) / dur)
+    k = min(int(u * (len(path) - 1)), len(path) - 2); r = u * (len(path) - 1) - k
+    cx = (path[k][0] + (path[k + 1][0] - path[k][0]) * r) * w; cy = (path[k][1] + (path[k + 1][1] - path[k][1]) * r) * h
+    rad = (0.18 + 0.08 * u) * w
+    open_ = _eo((t - t0 - dur - 0.4) / 1.2)          # nach dem Fund geht langsam das Licht an
+    yy, xx = np.ogrid[:h, :w]
+    m = np.clip(1.25 - np.sqrt((xx - cx) ** 2 + (yy - cy) ** 2) / rad, 0, 1)[..., None] ** 1.4
+    m = m * (1 - open_) + open_
+    return np.clip(img * (0.14 + 1.0 * m + 0.12 * (1 - open_) * m), 0, 255).astype(np.uint8)
+
+_SHARDS = {}
+def shatter_fx(prev, cur, t, t0):
+    """Panel zerbricht: erst Risse im alten Bild, dann fliegen Scherben weg, dahinter das neue Bild."""
+    h, w = cur.shape[:2]
+    if t >= t0 + 1.9: return cur
+    if t < t0: return prev
+    a = prev.copy()
+    uc = _eo((t - t0) / 0.5)
+    r = np.random.default_rng(5); cx, cy = int(w * 0.55), int(h * 0.45)
+    for k in range(9):
+        ang = k * 0.7 + 0.3; L_ = 1.0 * w * uc; x, y = cx, cy; pts = [(x, y)]
+        for _ in range(8):
+            ang += r.uniform(-0.35, 0.35); x += L_ / 8 * math.cos(ang); y += L_ / 8 * math.sin(ang); pts.append((int(x), int(y)))
+        cv2.polylines(a, [np.array(pts, np.int32)], False, (250, 240, 215), 3, cv2.LINE_AA)
+    u = (t - t0 - 0.6) / 1.3
+    if u <= 0: return a
+    key = (w, h)
+    if key not in _SHARDS:
+        rr = np.random.default_rng(3); angs = np.sort(rr.uniform(0, 2 * math.pi, 9)); sh = []; far = 3 * w
+        for a0, a1 in zip(angs, np.roll(angs, -1)):
+            if a1 < a0: a1 += 2 * math.pi
+            poly = np.array([(cx, cy), (cx + far * math.cos(a0), cy + far * math.sin(a0)), (cx + far * math.cos((a0 + a1) / 2), cy + far * math.sin((a0 + a1) / 2)),
+                             (cx + far * math.cos(a1), cy + far * math.sin(a1))], np.int32)
+            m = np.zeros((h, w), np.uint8); cv2.fillPoly(m, [poly], 255); sh.append((m, (a0 + a1) / 2, rr.uniform(-0.6, 0.6)))
+        _SHARDS[key] = sh
+    out = cur.copy()
+    for m, ang, rot in _SHARDS[key]:
+        dist = 0.65 * w * u ** 1.6
+        M_ = cv2.getRotationMatrix2D((cx, cy), rot * 40 * u, 1 - 0.25 * u)
+        M_[0, 2] += dist * math.cos(ang); M_[1, 2] += dist * math.sin(ang) + 0.28 * h * u * u
+        piece = cv2.warpAffine(a, M_, (w, h)); mm = cv2.warpAffine(m, M_, (w, h))
+        al = (mm[..., None] / 255.0) * (1 - u * 0.3)
+        out = (out * (1 - al) + piece * al).astype(np.uint8)
+        e = cv2.Canny(mm, 50, 150); out[e > 0] = INK
+    return out
+
+def page_flip(pa, pb, u):
+    """Seite umblättern (bildfüllend): Seite A klappt nach links weg, Seite B liegt darunter."""
+    u = _eo(u)
+    if u <= 0: return pa
+    out = pb.copy(); w = int(W * (1 - u))
+    if w > 2:
+        sq = cv2.resize(pa, (w, H)); shade = np.linspace(1.0, 0.55 + 0.45 * (1 - u), w)[None, :, None]
+        out[:, :w] = (sq * shade).astype(np.uint8)
+        k = min(40, W - w)
+        if k > 0: out[:, w:w + k] = (out[:, w:w + k] * np.linspace(0.4, 1, k)[None, :, None]).astype(np.uint8)
+    return out
+
+_OV_CACHE = {}
+def draw_new_overlay(s, fr, t):
+    """Zeichnet die neuen Overlay-Arten. s: Overlay-Objekt."""
+    kw = s.kw
+    u_in = min((t - s.t0) / 0.22, 1); u_out = min((s.t1 - t) / 0.25, 1); al = max(min(u_in, u_out), 0)
+    if s.kind == "headline":
+        if id(s) not in _OV_CACHE: _OV_CACHE[id(s)] = headline_img(kw["text"], kw.get("size", 170))
+        u = min((t - s.t0) / 0.14, 1)
+        cx, cy = kw.get("center", (W / 2, 880))
+        return blit(fr, _OV_CACHE[id(s)], cx, cy, (1.9 - 0.9 * u ** 2) * kw.get("scale", 1.0), min(1, u_out * 4))
+    if s.kind == "wanted":
+        if id(s) not in _OV_CACHE: _OV_CACHE[id(s)] = wanted_img(kw["face"], kw.get("header", "GESUCHT"), kw["name"], kw.get("year", ""))
+        u = _eo((t - s.t0) / 0.35)
+        cx, cy = kw.get("center", (430, 560))
+        return blit(fr, _OV_CACHE[id(s)], cx, cy, (1.4 - 0.75 * u) * kw.get("scale", 1.0), min(1, (t - s.t0) / 0.12, u_out))
+    if s.kind == "clock":
+        dur = kw.get("dur", 2.4)
+        ang = kw.get("dir", -1) * _eo((t - s.t0 - 0.2) / dur) * 2 * math.pi * 30
+        cx, cy = kw.get("center", (W / 2 + 420, H / 2 - 60))
+        fr = blit(fr, clock_img(ang), cx, cy, 0.9, al)
+        if "y0" in kw:
+            yr = int(round(kw["y0"] + (kw["y1"] - kw["y0"]) * _eo((t - s.t0 - 0.2) / dur))); txt = str(yr)
+        else:
+            txt = kw.get("text", "")
+        if txt:
+            key = (id(s), txt)
+            if key not in _OV_CACHE: _OV_CACHE[key] = caption_img(txt, 100, big=True)
+            fr = blit(fr, _OV_CACHE[key], cx, cy + 290, 1.0, al)
+        return fr
+    if s.kind == "extrablatt":
+        if id(s) not in _OV_CACHE: _OV_CACHE[id(s)] = extrablatt_img(kw["title"], kw["num"], kw.get("line", "EXTRABLATT"))
+        d = t - s.t0; total = s.t1 - s.t0
+        bg = min(1, d / 0.15, (total - d) / 0.35)
+        fr = (fr * (1 - bg) + np.array((18, 16, 14), np.float32) * bg).astype(np.uint8)
+        u = _eo(d / 1.3); rot = (1 - u) * 720; sc = 0.15 + 0.85 * u
+        key = (id(s), int(rot))
+        im = Image.fromarray(_OV_CACHE[id(s)]).rotate(rot, expand=True, resample=Image.BILINEAR) if rot > 0.5 else Image.fromarray(_OV_CACHE[id(s)])
+        return blit(fr, np.array(im), W / 2, H / 2, sc * 0.95 * (1 + 0.02 * max(d - 1.3, 0)), bg)
+    return fr
+
+HL = lambda text, a=0.1, **k: ("headline", a, None, dict(text=text, **k))          # Schlagzeile knallt
+WA = lambda name, header, year, crop, a=0.2, **k: ("wanted", a, None, dict(name=name, header=header, year=year, crop=crop, **k))  # Fahndungsplakat
+CL = lambda a=0.0, b=3.2, **k: ("clock", a, b, k)                                    # Zeitsprung-Uhr
+TL = lambda path, a=0.0, dur=3.0: {"type": "flashlight", "path": path, "a": a, "dur": dur}   # Taschenlampe
+SH = lambda a=-0.2: {"type": "shatter", "a": a}                                      # Panel zerbricht (vorheriges Bild bricht weg)

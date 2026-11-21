@@ -48,6 +48,7 @@
 | Nr | Datum | Titel | Länge | Credits |
 |---|---|---|---|---|
 | 001 | 18.11.2026 | Der mächtigste Gangster Amerikas – gestürzt von einem Buchhalter | 8:10 | ~110 (inkl. einmalig Musikbibliothek) |
+| 002 | 21.11.2026 | Der perfekte Raub, der zur tödlichen Falle wurde (Lufthansa-Raub 1978) | 8:56 | ~100 (Bilder 0,75 statt 0,25!) |
 
 ## Ton & Musik mit audiokit (Laurin 18.11.2026)
 Problem: Soundeffekte oft unpassend/billig, Musik zu gleichförmig – Laurin schaut die eigenen Videos nicht zu Ende. vidIQ-Auswertung 18.11.: größter Absprung in den ersten ~30 s; Musik läuft 1,5–3 Min. gleich durch, kein Spannungsaufbau vor Enthüllungen; Passagen von 25–60 s ohne neuen Reiz.
@@ -75,3 +76,12 @@ Grundlage: Auswertung erfolgreicher Ausreißer-Videos in allen 5 Nischen (vidIQ)
 - **Reihenfolge bei der Sound-Wahl:** 1. eigene assets/sfx (abgenommen) → 2. Bibliothek (`import bibliothek as BIB; BIB.pick("nachtausgabe", "whoosh", seed=<video-ordner>)`, `BIB.suche("auto")`) → 3. Hugging Face/SFXMint nur, wenn nichts passt.
 - `seed` = Video-Ordner: so wechseln die Sounds von Video zu Video, ohne dass es zufällig klingt. Alle Bibliotheks-Sounds sind geprüft (audit.py), Memes/geschützte/kommerzielle Sounds sind aussortiert.
 - Nie Effekte aus fremden Kanal-Ordnern nehmen; `reserve/` nur nach Rückfrage bei Laurin.
+
+## Erkenntnisse aus 002 (21.11.2026)
+- Neue Effekte (Extrablatt, Schlagzeile, Fahndungsplakat, Taschenlampe, Panel zerbricht, Zeitsprung-Uhr, Seite umblättern) sind jetzt fest in `engine/engine.py` + `render.py` (Kurzschreibweisen HL, WA, CL, TL, SH). Extrablatt ersetzt die Kapitelkarte automatisch (`CH_PAUSE = 3.0`).
+- Fahndungsplakat nur mit passender Überschrift (z. B. „VERMISST“, „DER TIPPGEBER“) – „GESUCHT“ nur, wenn die Person wirklich gesucht wurde.
+- Sterling spricht „Burke“ am Satzanfang falsch → „Jimmy Burke …“.
+- Hook wird schnell zu lang: 15 Zeilen = 95 s. Mit 10 Zeilen ~74 s. Frage früher stellen (≤ 15 s).
+- Higgsfield: max. 8 gleichzeitige Jobs – Stimm-Batches nacheinander abschicken und abwarten.
+- Upload-Kopie: `-maxrate 4M -bufsize 8M` (5M ergibt bei 9 Min. über 299 MB). Höhen-EQ vor AAC erhöht True Peak nach dem Kodieren um ~1,5 dB → Limiter auf −3,5 dB.
+- **Kosten (21.11.2026):** GPT Image 2.6 kostet jetzt 0,75 Credits pro Bild (README sagt 0,25), Eleven v4 0,23–1,15 pro Zeile. 71 Panels + 2 Heros + 80 Sprachzeilen ≈ 100 Credits – über der 45er-Grenze aus HANDWERK.md. Laurin entscheiden lassen: billigeres Bildmodell oder weniger Panels.

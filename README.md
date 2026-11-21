@@ -33,7 +33,7 @@ export WORK=/home/claude/na-work && sh setup.sh
 2. **Skript** `videos/NNN-slug/lines.py`: `LINES = {1: "...", ...}` – ein Satz/Gedanke = ein Panel (Ziel 60–70 Zeilen).
    Aufbau: Einstieg ~15–18 Zeilen, max. 60–75 s (Hook mit dem dramatischsten Moment, Fall/Name in den ersten 5 s im Bild, offene Fragen + Versprechen – siehe LESSONS.md „Hook-Regeln“, Wendung, Satz „… das ist die Geschichte der heutigen Nachtausgabe.“), dann 4 Kapitel, Ende mit Kommentar-Frage + „Abonniere den Kanal und aktiviere die Glocke. Bis zur nächsten Nacht.“
    **Zahlen immer ausschreiben** („neunzehnhundertneunundzwanzig“), keine Abkürzungen, englische Namen sparsam.
-3. **Panels** mit Higgsfield `generate_image_batch` (Modell `gpt_image_2_6`, `aspect_ratio 16:9`, 0,25 Credits/Bild), höchstens 6 pro Aufruf (sonst Rate-Limit). Jeder Prompt beginnt mit:
+3. **Panels** mit Higgsfield `generate_image_batch` (Modell `gpt_image_2_6`, `aspect_ratio 16:9`, 0,75 Credits/Bild, Stand 21.11.2026), höchstens 6 pro Aufruf (sonst Rate-Limit). Jeder Prompt beginnt mit:
    > Comic book panel, graphic novel noir style, bold black ink linework, heavy shadows, halftone dot shading, limited palette of black, off-white paper and a single warm amber-yellow accent color.
 
    und endet mit „No readable text, no logos.“ Keine Gewaltdarstellung (kein Blut, keine Leichen, keine Waffen im Anschlag). Echte Personen nur als gezeichnete, nicht fotorealistische Figur. Speichern als `$WORK/img/p01.png …`.
