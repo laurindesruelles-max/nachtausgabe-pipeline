@@ -20,7 +20,7 @@ Quelle: Claude-Doc „Kanal-Handschriften“ https://claude.ai/artifact/UGsg2WZK
 - **Kein Bild kommt zweimal vor.** Günstige Bewegung: Blender, eigene Motion-Grafik, Pixabay. KI-Videoclips nur mit Laurins Freigabe.
 
 ## Bild-Drehbuch: Darstellung von Zeit und Geschehen (Laurin, 21.11.2026)
-Jedes Skript bekommt **vor dem Einsprechen** ein Bild-Drehbuch (`videos/NNN-slug/bilddrehbuch.json`), das Satz für Satz festlegt, was im Bild passiert. Prüfung: `python3 engine/bilddrehbuch.py videos/NNN-slug/bilddrehbuch.json` – erst bei 0 Fehlern wird eingesprochen. Welche Animationen der Kanal dafür hat, steht in seiner `ANIMATION.md` (alles außer Higgsfield-Videoclips ist erlaubt, Laurin 21.11.2026).
+Jedes Skript bekommt **vor dem Einsprechen** ein Bild-Drehbuch (`videos/NNN-slug/bilddrehbuch.json`), das Satz für Satz festlegt, was im Bild passiert. Prüfung: `python3 engine/bilddrehbuch.py videos/NNN-slug/bilddrehbuch.json` – erst bei 0 Fehlern wird eingesprochen. Im Bild-Drehbuch stehen Jahre, Uhrzeiten und Zahlen als Ziffern (auch wenn das Sprech-Skript sie ausschreibt), damit die Prüfung sie erkennt. Ein Satz darf mehrere Einträge haben, wenn im selben Bild mehrere Ereignisse passieren. Welche Animationen der Kanal dafür hat, steht in seiner `ANIMATION.md` (alles außer Higgsfield-Videoclips ist erlaubt, Laurin 21.11.2026).
 
 **Wie genau muss das Bild sein?** Je Satz eine Stufe wählen:
 - **exakt** – das Bild zeigt genau das Gesagte: das Jahr, die Uhrzeit, den Ort, die Zahl, den einen Moment der Handlung. Pflicht bei jeder Jahreszahl, Uhrzeit, harten Zahl und bei jedem Wendepunkt. Ungenauigkeit an diesen Stellen kostet Vertrauen und damit Zuschauer.

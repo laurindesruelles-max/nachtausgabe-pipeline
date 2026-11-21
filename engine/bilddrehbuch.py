@@ -7,6 +7,7 @@ Abschnitt „Bild-Drehbuch“; erlaubte Animationen: EFFEKTE.md + ANIMATION.md d
 
 Aufruf:  python3 engine/bilddrehbuch.py videos/NNN-slug/bilddrehbuch.json [--kanal goldsmith]
 Exit 1 bei Fehlern (dann Drehbuch/Skript überarbeiten), Warnungen nur melden.
+Zahlen, Jahre und Uhrzeiten im Feld „satz“ als Ziffern schreiben. Mehrere Ereignisse in einem Bild = mehrere Einträge mit „sek“.
 
 bilddrehbuch.json = Liste von Einstellungen in Videoreihenfolge:
   {
