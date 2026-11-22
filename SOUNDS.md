@@ -23,7 +23,7 @@ Gesäubert: Hochpass 60 Hz, Anfangsstille entfernt, −20 LUFS. Nur passend zum 
 | glass-clink-01 | Gläser | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
 | hammer-01 | Richterhammer | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
 | impact-crate-break-08 | Fass/Kiste zerschlagen | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
-| impact-slam-35 | Stempel/Schlag auf Tisch | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
+| impact-slam-35 | Schlagzeile knallt (Erkennungssound, zusammen mit logo-reveal-01; kein Stempel – der gehört Goldsmith) | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
 | iron-gate-01 | Gefängnistor | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
 | keys-jingling-01 | Schlüssel (Gefängnis) | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
 | lighter-flick-01 | Feuerzeug | Hugging Face flreey/sfxmint-cc0-sound-effects (sample/) | CC0 |
