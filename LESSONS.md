@@ -85,3 +85,12 @@ Grundlage: Auswertung erfolgreicher Ausreißer-Videos in allen 5 Nischen (vidIQ)
 - Higgsfield: max. 8 gleichzeitige Jobs – Stimm-Batches nacheinander abschicken und abwarten.
 - Upload-Kopie: `-maxrate 4M -bufsize 8M` (5M ergibt bei 9 Min. über 299 MB). Höhen-EQ vor AAC erhöht True Peak nach dem Kodieren um ~1,5 dB → Limiter auf −3,5 dB.
 - **Kosten (21.11.2026):** GPT Image 2.6 kostet jetzt 0,75 Credits pro Bild (README sagt 0,25), Eleven v4 0,23–1,15 pro Zeile. 71 Panels + 2 Heros + 80 Sprachzeilen ≈ 100 Credits – über der 45er-Grenze aus HANDWERK.md. Laurin entscheiden lassen: billigeres Bildmodell oder weniger Panels.
+
+## Erzähl-Bausteine nach Wissenswert-Vorbild (Laurin 22.11.2026, gilt ab dem nächsten Video)
+Referenz: Wissenswert „Wie eine Spionin den größten CEO der Welt ruinierte“ (Spionage-/Affären-Fall, 372 Tsd. Aufrufe in 2 Tagen). Nur die Erzählweise übernehmen – **keine echten Clips** (würden den Comic-Noir-Look brechen).
+- **Kaltstart als Szene mit Datum + Ort** als Schlagzeile/Panel („6. JUNI 2024 – TAIPEH“), ein konkreter Moment (Foto, Begegnung, Nachricht) als Anker.
+- **Eskalationstreppe im Hook:** 3–4 Stufen, jede größer; danach 3-teiliges Versprechen („wie …, wie …, warum …“). Frage spätestens bei 15 s.
+- **Doppelleben/zwei Welten:** wo der Fall es hergibt, Split-Panel „öffentlich vs. heimlich“.
+- **Anker-Panel als Rahmen:** Das Panel vom Anfang kommt am Ende verändert zurück.
+- **Belegte Fun-Facts** alle 2–3 Min. als Zeitungsausschnitt-Panel.
+- **Schluss:** offene Frage/3 Deutungen des Falls + Kommentar-Frage.
