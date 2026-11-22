@@ -1,5 +1,7 @@
 # Geräusche (assets/sfx)
 
+> **Regel (Laurin 22.11.2026):** Sounds zuerst bei **Freesound** suchen (`sk.py find … --channel <kanal>` macht das automatisch, wenn `FREESOUND_KEY` gesetzt ist), danach Bestand. **Laurins abgesegnete Goldsmith-Sounds dürfen alle Kanäle nutzen.** Nur der **Kapitel-Sound ist je Kanal exklusiv**: Goldsmith braam + boom · Meisterwerk industrial_electromagnetic_launcher_01 · Unterbau ub_hit · Denkmuster klang · Nachtausgabe cinematic_boom_01. Jeder neue Sound vorher durch earshot + Gemini-Casting (Skill doku-ohren); Piep-/Daten-Töne sind erlaubt, wenn sie gut klingen.
+
 **Update (Laurin 19.11.2026): Gemeinsame Sound-Bibliothek für alle Kanäle** – zusätzlich zu diesem Ordner dürfen alle Effekte aus `laurindesruelles-max/sound-bibliothek` genutzt werden, gefiltert nach dem Stilprofil des Kanals (README dort, `sk.py find … --channel <kanal>`). Musik bleibt kanal-eigen. Die Regel vom 17.11. („nur eigene Effekte“) gilt damit nicht mehr.
 
 Gesäubert: Hochpass 60 Hz, Anfangsstille entfernt, −20 LUFS. Nur passend zum Bild einsetzen.
