@@ -38,6 +38,15 @@ Weitere freigegebene Animationsarten für die Nische und die Bild-Drehbuch-Regel
 | Zeitungsgrafik | Zahl und Balken im Stil einer alten Zeitung | harte Zahl | steht, Stil anpassen |
 | Seite umblättern | Die Comicseite schlägt um | großer Übergang | neu, Stilprobe 20.11. |
 
+| Panel-Grafik Karte (`motion` map) | Tatorte als Comic-Burst, Bernstein-Route, Sprechblasen-Orte – im Panel auf der Seite | Länder/Regionen (Straßen: Comic-Stadtplan) | neu, ANOM-Wissen 23.11. |
+| Der Plan (`motion` flow) | Stationen als kleine Comic-Panels mit Speedlines, Abzweig mit Schlag | Ablauf der Tat | neu, ANOM-Wissen 23.11. |
+| Fahndungsplakat dreht sich (`motion` flip) | GESUCHT-Plakat dreht sich, Strahlenkranz, Täter in Bernstein | Enthüllung (ergänzt Schlagzeile) | neu, ANOM-Wissen 23.11. |
+| Beute-Zahl (`motion` counter) | Zeitungsausschnitt, Zahl in Bangers, Geldscheine fliegen | Beute, Schaden | neu, ANOM-Wissen 23.11. |
+| GESUCHT-Raster (`motion` grid) | Mini-Fahndungsplakate, betroffene in Bernstein | Beteiligte, Opfer | neu, ANOM-Wissen 23.11. |
+| Akten-Stapel (`motion` stack) | Ermittlungsakten stapeln sich, rotes Fragezeichen | offene Fragen | neu, ANOM-Wissen 23.11. |
+
+**Erweiterung 23.11.2026 (ANOM-Stilprobe):** `motion`-Bausteine **zusätzlich** (nichts ersetzt). Die Grafik steht immer in einem Panel auf der Comicseite (Nachbar-Panels sichtbar). Eigene Formen: Tusche-Silhouetten, Comic-Burst, Speedlines, GESUCHT-Plakate, Erzählkästchen, Sprechblasen. Doku: `engine/motion_na.py`. Demo `Nachtausgabe_Motion_Bausteine.mp4` (23.11.2026).
+
 **Raus:** der Stempel bei Enthüllungen (ab jetzt Schlagzeile).
 
 Stilproben: `stilprobe_nachtausgabe.mp4` (bildfüllend) und `stilprobe_nachtausgabe_mitte.mp4` (gewählte Richtung), beide vom 20.11.2026. Sounds folgen nach dem Casting (`doku-ohren`).

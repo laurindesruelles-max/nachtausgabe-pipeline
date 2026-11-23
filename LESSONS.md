@@ -94,3 +94,5 @@ Referenz: Wissenswert „Wie eine Spionin den größten CEO der Welt ruinierte�
 - **Anker-Panel als Rahmen:** Das Panel vom Anfang kommt am Ende verändert zurück.
 - **Belegte Fun-Facts** alle 2–3 Min. als Zeitungsausschnitt-Panel.
 - **Schluss:** offene Frage/3 Deutungen des Falls + Kommentar-Frage.
+
+- **2D-Motion-Graphics (23.11.2026):** Laurin will das Handwerk der ANOM-Stilprobe (viel 2D-Animation, Bildwechsel alle 2–4 s) in jedem Kanal – als Erweiterung im eigenen Stil, nichts überschreiben; Unterschied nicht nur in Farben, sondern auch in Symbolen und Formen. Bisheriges (echte Fakten mit Quelle, Effekt-Katalog, Sounds) bleibt.

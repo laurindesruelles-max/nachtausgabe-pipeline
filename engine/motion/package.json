@@ -1,0 +1,16 @@
+{
+  "name": "nachtausgabe-motion",
+  "private": true,
+  "description": "2D-Motion-Graphics fuer Nachtausgabe (Remotion). Siehe engine/motion_na.py",
+  "dependencies": {
+    "@remotion/bundler": "^4",
+    "@remotion/cli": "^4",
+    "@remotion/renderer": "^4",
+    "d3-geo": "^3",
+    "react": "18",
+    "react-dom": "18",
+    "remotion": "^4",
+    "topojson-client": "^3",
+    "world-atlas": "^2"
+  }
+}

@@ -52,3 +52,6 @@ export WORK=/home/claude/na-work && sh setup.sh
 
 ## Nur den Ton neu mischen
 `AUDIO_ONLY=1 python3 engine/render.py neu.mp4 videos/NNN-slug` (nutzt `$WORK/full_v.mp4`). Regler: `MUSIC_GAIN` (Standard 1.15), `CH_BOOM` (Kapitel-Schlag, Standard 0.18).
+
+## 2D-Motion-Graphics (seit 23.11.2026, Erweiterung aus der ANOM-Stilprobe)
+`engine/motion_na.py` + `engine/motion/` (Remotion) im Comic-Noir-Look (Panel auf der Seite, Tusche, Bernstein, GESUCHT-Plakate). Ergänzt die Comicseiten, ersetzt nichts. Einmalig `cd engine/motion && npm install`. API im Dateikopf.
