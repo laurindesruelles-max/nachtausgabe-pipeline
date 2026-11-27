@@ -49,6 +49,7 @@
 |---|---|---|---|---|
 | 001 | 18.11.2026 | Der mächtigste Gangster Amerikas – gestürzt von einem Buchhalter | 8:10 | ~110 (inkl. einmalig Musikbibliothek) |
 | 002 | 21.11.2026 | Der perfekte Raub, der zur tödlichen Falle wurde (Lufthansa-Raub 1978) | 8:56 | ~100 (Bilder 0,75 statt 0,25!) |
+| 003 | 27.11.2026 | Vier Minuten, 113 Millionen: Der Coup im Grünen Gewölbe (Upload So 29.11., 20:00) | 9:58 | ~100 (64 Bilder à 0,75 + 76 Sprachzeilen) |
 
 ## Ton & Musik mit audiokit (Laurin 18.11.2026)
 Problem: Soundeffekte oft unpassend/billig, Musik zu gleichförmig – Laurin schaut die eigenen Videos nicht zu Ende. vidIQ-Auswertung 18.11.: größter Absprung in den ersten ~30 s; Musik läuft 1,5–3 Min. gleich durch, kein Spannungsaufbau vor Enthüllungen; Passagen von 25–60 s ohne neuen Reiz.
@@ -96,3 +97,16 @@ Referenz: Wissenswert „Wie eine Spionin den größten CEO der Welt ruinierte�
 - **Schluss:** offene Frage/3 Deutungen des Falls + Kommentar-Frage.
 
 - **2D-Motion-Graphics (23.11.2026):** Laurin will das Handwerk der ANOM-Stilprobe (viel 2D-Animation, Bildwechsel alle 2–4 s) in jedem Kanal – als Erweiterung im eigenen Stil, nichts überschreiben; Unterschied nicht nur in Farben, sondern auch in Symbolen und Formen. Bisheriges (echte Fakten mit Quelle, Effekt-Katalog, Sounds) bleibt.
+
+## Erkenntnisse aus 003 (27.11.2026)
+- **2D-Motion-Clips sind jetzt in `render.py` eingebaut:** `MOTION = {zeile: (baustein, props)}` in episode.py. Diese Zeilen brauchen kein KI-Panel (spart Credits), im Seitenstreifen steht das Schlussbild des Clips, der Clip blendet über das Panel. Am Kapitelstart beginnt der Clip erst nach dem Extrablatt. 10 Clips rendern ≈ 20 Min. (Remotion) – vorher Schriften installieren: `cp assets/fonts/*.ttf ~/.fonts && fc-cache -f`, sonst Serifen-Ersatzschrift.
+- **Schlagzeilen-Sound neu:** `newspaper-slap-01` (Freesound 67034, CC0) im Gemini-Casting PREMIUM, `impact-slam-35` CHEAP. Steht als `HEADLINE_SFX` in episode.py. Auch PREMIUM: `book-drop-08` (Freesound 484904, CC0).
+- **Gemini bei Motion-Sounds:** Zähler-Tick (`clock_tick`) und Karten-Pin-Klopfen (`door-knock-01`) klangen nach „Arcade/Plopp“ → render.py lässt sie bei Motion-Clips weg.
+- **Whoosh nur noch bei echtem Bildwechsel** (Laurin 24.11.): render.py setzt keinen Whoosh mehr bei jeder Panel-Fahrt (nur mit `PANEL_WHOOSH=1`), mindestens 6 s Abstand.
+- **Musik unter Sprache ≥ 16 dB:** `DUCK = 0.68` → 16,9 dB.
+- **Master:** dynamisches Einmal-loudnorm drückte „loudest 3 s“ auf 2,8 LU (earshot major). Neu: `MASTER_LINEAR=1` (Messung + linear) und `TITLE_GAIN` (Titeltafel als Höhepunkt). Limiter `MASTER_LIM=0.58`, sonst Clipping nach AAC (flache Limiter-Spitzen → +4 dB True Peak beim Dekodieren). Ergebnis launch-grade, 0 major.
+- **Faktencheck vor dem Einsprechen hat sich gelohnt:** 4:56 (nur Wikipedia) → 4:57 laut Anklage; Fluchtauto-Marke „Mercedes“ unbelegt; die Degenklinge ist ein Schaden, kein fehlendes Stück.
+- Higgsfield markierte „surveillance camera“-Prompts zweimal als NSFW → umschreiben („tiny amber indicator light“). Deutsche Gerichte: keine Hämmer, keine Flaggen im Prompt (Panel kam mit US-Flagge).
+- Sterling spricht „kurz“ am Satzanfang wie „Kürbs/Kürzt“ → „Wenige Minuten vor …“, „Wenig später …“.
+- Video wurde 9:58 lang (Ziel 9:30): 72 Zeilen mit ~1.050 Wörtern sind die Obergrenze; Hook 83 s statt ≤ 75 s – beim nächsten Mal 8 statt 10 Hook-Zeilen.
+- **Kosten bleiben ~100 Credits** (Bilder 0,75). Für 40–50 Credits müsste Laurin entscheiden: weniger Panels (mehr Motion-Clips statt Bildern) oder ein billigeres Bildmodell.

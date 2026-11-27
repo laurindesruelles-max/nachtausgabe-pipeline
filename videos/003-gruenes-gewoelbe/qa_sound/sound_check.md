@@ -1,0 +1,9 @@
+# Sound-Check final.mp4
+
+- Lautheit: -15.3 LUFS (Ziel −14 ±1,5), True Peak -2.2 dBTP (Ziel ≤ −1)
+- Effektdichte: nur mit --cues (Effektliste der Engine)
+- Sync zu den Schnitten: 108 cuts: 28% have an onset within 1 frame (chance 40%), 69% within 100 ms, median |offset| 55 ms; 7% land on a strong accent (>= 12 dB over the bed) within 1 frame (chance 8%); 15 only by a level peak (soft whoosh / swell?); 18 without a hit: 0:24
+- Bildbogen: videos/003-gruenes-gewoelbe/qa_sound/sheet.png (mit Read ansehen)
+
+## Earshot-Hörprotokoll
+mix.wav: 0:00.00-9:58.40 (598.4 s). Loudness -15.3 LUFS integrated, true peak -2.2 dBTP, LRA 4.1 LU; loudest 1:24.00-1:27.00 (-12.3 LUFS short-term). No steady beat grid (pulse clarity 0.13 < 0.15). 7 section(s): 0:00.00-2:51.03 inspirational corporate background music, vocal chop, confident and cool | voice: voice-over narration; 2:51.03-4:31.09 inspirational corporate background music, pizzicato strings, confident and cool | also: typewriter (AST) | voice: voice-over narration; 4:31.09-5:13.06 inspirational corporate background music, pizzicato strings; 5:13.06-6:21.64 inspirational corporate background music?, vocal chop; 6:21.64-8:14.59 inspirational corporate background music, vocal chop, confident and cool | also: brass instrument (AST) | voice: voice-over narration; 8:14.59-8:34.36 funk music, vocal chop, confident and cool | voice: voice-over narration. 3687 events (6.2/s); 20 tagged (5 note, 4 voice, 4 ui, 2 key, 2 hit, 1 riser, 1 foley, 1 whoosh; tags are hints). Strongest accents over a running bed: 7:55.46 +36 dB, 0:00.72 +36 dB, 8:09.52 +35 dB. Sync to 108 cuts: 28% have an onset within 1 frame (chance 40%), 69% within 100 ms, median |offset| 55 ms; 7% land on a strong accent (>= 12 dB over the bed) within 1 frame (chance 8%); 15 only by a level peak (soft whoosh / swell?); 18 without a hit: 0:24.47, 1:29.73, 2:07.30, 2:11.83, 4:30.37, 4:51.67.

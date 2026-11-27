@@ -1,0 +1,2041 @@
+[
+ {
+  "satz": "Das Grüne Gewölbe in Dresden. 25. November 2019, kurz vor 5 Uhr morgens.",
+  "sek": 3.2,
+  "zeigt": "Erzählkästchen: DRESDEN · 25. NOVEMBER 2019 · KURZ VOR 5 UHR – Zeile 1: Das Grüne Gewölbe in Dresden. Fünfundzwanzigster November zw",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:wer",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 1) – Zeile 1: Das Grüne Gewölbe in Dresden. Fünfundzwanzigster November zw",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "An der Augustusbrücke brennt ein Stromverteiler. Rund um das Schloss gehen die Straßenlaternen aus.",
+  "sek": 3.4,
+  "zeigt": "Erzählkästchen: Augustusbrücke · Stromverteiler – Zeile 2: An der Augustusbrücke brennt ein Stromverteiler. Rund um das",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 2) – Zeile 2: An der Augustusbrücke brennt ein Stromverteiler. Rund um das",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Im Dunkeln steigen zwei Männer durch ein Fenster in eine der berühmtesten Schatzkammern Europas.",
+  "sek": 3.4,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 3) – Zeile 3: Im Dunkeln steigen zwei Männer durch ein Fenster in eine der",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Taschenlampe im Panel (Szene: Zeile 3) – Zeile 3: Im Dunkeln steigen zwei Männer durch ein Fenster in eine der",
+  "animation": "Taschenlampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Auf den Monitoren der Wachleute sieht man, wie einer von ihnen mit einer Axt auf eine Vitrine einschlägt.",
+  "sek": 2.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 4) – Zeile 4: Auf den Monitoren der Wachleute sieht man, wie einer von ihn",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 4: Auf den Monitoren der Wachleute sieht man, wie einer von ihn",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera driftet weiter durchs Panel – Zeile 4: Auf den Monitoren der Wachleute sieht man, wie einer von ihn",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Nach wenigen Minuten sind sie wieder draußen. Mit einundzwanzig Schmuckstücken und mehr als 4300 Diamanten.",
+  "sek": 3.6,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 5) – Zeile 5: Nach wenigen Minuten sind sie wieder draußen. Mit einundzwan",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 5) – Zeile 5: Nach wenigen Minuten sind sie wieder draußen. Mit einundzwan",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Die Anklage beziffert den Wert später auf über 113 Millionen Euro. Ein Coup wie aus dem Kino.",
+  "sek": 4.0,
+  "zeigt": "2D-Grafik im Panel: DIE BEUTE WERT LAUT ANKLAGE – Zeile 6: Die Anklage beziffert den Wert später auf über hundertdreize",
+  "animation": "Beute-Zahl (`motion` counter)",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 4.0,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 6: Die Anklage beziffert den Wert später auf über hundertdreize",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Doch wer waren die Männer? Und wo ist die Beute geblieben?",
+  "sek": 2.8,
+  "zeigt": "Taschenlampe im Panel (Szene: Zeile 7) – Zeile 7: Doch wer waren die Männer? Und wo ist die Beute geblieben?",
+  "animation": "Taschenlampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:juwelen0",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 7: Doch wer waren die Männer? Und wo ist die Beute geblieben?",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Die Spur führt nach Berlin. Zu Mitgliedern einer Großfamilie, deren Name schon einmal mit einem Museum in Verbindung stand.",
+  "sek": 3.0,
+  "zeigt": "Erzählkästchen: Berlin – Zeile 8: Die Spur führt nach Berlin. Zu Mitgliedern einer Großfamilie",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 8) – Zeile 8: Die Spur führt nach Berlin. Zu Mitgliedern einer Großfamilie",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 8: Die Spur führt nach Berlin. Zu Mitgliedern einer Großfamilie",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Und zu einem Deal, bei dem ein Teil der Beute mitten in der Nacht in Berlin wieder auftaucht.",
+  "sek": 2.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 9) – Zeile 9: Und zu einem Deal, bei dem ein Teil der Beute mitten in der ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 9: Und zu einem Deal, bei dem ein Teil der Beute mitten in der ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera driftet weiter durchs Panel – Zeile 9: Und zu einem Deal, bei dem ein Teil der Beute mitten in der ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Am Ende dieser Nacht weißt du, wie der Coup ablief, wie die Täter gefasst wurden und welcher Diamant bis heute fehlt. Das ist die Geschichte der heutigen Nachtausgabe.",
+  "sek": 3.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 10) – Zeile 10: Am Ende dieser Nacht weißt du, wie der Coup ablief, wie die ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:diamant",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Panel-Fahrt im Panel (Szene: Zeile 10) – Zeile 10: Am Ende dieser Nacht weißt du, wie der Coup ablief, wie die ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Kamera driftet weiter durchs Panel – Zeile 10: Am Ende dieser Nacht weißt du, wie der Coup ablief, wie die ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Licht im Panel flackert – Zeile 10: Am Ende dieser Nacht weißt du, wie der Coup ablief, wie die ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 0
+ },
+ {
+  "satz": "Um zu verstehen, was in dieser Nacht verloren ging, müssen wir 300 Jahre zurück.",
+  "sek": 3.3,
+  "zeigt": "Extrablatt aus der Druckerpresse: DIE SCHATZKAMMER – Zeile 11: Um zu verstehen, was in dieser Nacht verloren ging, müssen w",
+  "animation": "Extrablatt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.3,
+  "zeigt": "Zeitsprung-Uhr: 1723 – Zeile 11: Um zu verstehen, was in dieser Nacht verloren ging, müssen w",
+  "animation": "Zeitsprung-Uhr",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.3,
+  "zeigt": "Panel-Fahrt im Panel (Szene: Zeile 11) – Zeile 11: Um zu verstehen, was in dieser Nacht verloren ging, müssen w",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Anfang des achtzehnten Jahrhunderts regiert in Sachsen August der Starke. Kurfürst, König von Polen und besessen von Glanz.",
+  "sek": 2.8,
+  "zeigt": "Fahndungsplakat: AUGUST DER STARKE – Zeile 12: Anfang des achtzehnten Jahrhunderts regiert in Sachsen Augus",
+  "animation": "Fahndungsplakat",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 12) – Zeile 12: Anfang des achtzehnten Jahrhunderts regiert in Sachsen Augus",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 12: Anfang des achtzehnten Jahrhunderts regiert in Sachsen Augus",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Zwischen 1723 und 1730 lässt er in seinem Dresdner Schloss eine Schatzkammer einrichten, die jeder bewundern soll.",
+  "sek": 4.0,
+  "zeigt": "2D-Grafik im Panel: 1723 – 1730 – Zeile 13: Zwischen siebzehnhundertdreiundzwanzig und siebzehnhundertdr",
+  "animation": "Panel-Grafik Karte (`motion` map)",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 4.0,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 13: Zwischen siebzehnhundertdreiundzwanzig und siebzehnhundertdr",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Den Namen hat sie von alten Räumen, in denen die Sockel und Kapitelle der Säulen malachitgrün gestrichen waren. Das Grüne Gewölbe.",
+  "sek": 3.2,
+  "zeigt": "Erzählkästchen: Sockel und Kapitelle · malachitgrün – Zeile 14: Den Namen hat sie von alten Räumen, in denen die Sockel und ",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 14) – Zeile 14: Den Namen hat sie von alten Räumen, in denen die Sockel und ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 14: Den Namen hat sie von alten Räumen, in denen die Sockel und ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Es gilt als eines der ältesten Museen Europas.",
+  "sek": 2.2,
+  "zeigt": "Erzählkästchen: eines der ältesten Museen Europas – Zeile 15: Es gilt als eines der ältesten Museen Europas.",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 2.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 15) – Zeile 15: Es gilt als eines der ältesten Museen Europas.",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Das Herz der Sammlung ist das Juwelenzimmer. Dort liegen ganze Garnituren aus Diamanten, Brillanten und Perlen.",
+  "sek": 3.8,
+  "zeigt": "Erzählkästchen: Das Juwelenzimmer – Zeile 16: Das Herz der Sammlung ist das Juwelenzimmer. Dort liegen gan",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 16) – Zeile 16: Das Herz der Sammlung ist das Juwelenzimmer. Dort liegen gan",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Knöpfe, Schnallen, Orden, ein Degen. Alles passend zueinander, gemacht, um einen König funkeln zu lassen.",
+  "sek": 3.6,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 17) – Zeile 17: Knöpfe, Schnallen, Orden, ein Degen. Alles passend zueinande",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 17: Knöpfe, Schnallen, Orden, ein Degen. Alles passend zueinande",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Eines der kostbarsten Stücke ist ein Schulterschmuck, eine Epaulette. In ihrer Mitte sitzt ein Diamant von fast fünfzig Karat.",
+  "sek": 3.0,
+  "zeigt": "Erzählkästchen: Epaulette · fast 50 Karat in der Mitte – Zeile 18: Eines der kostbarsten Stücke ist ein Schulterschmuck, eine E",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 18) – Zeile 18: Eines der kostbarsten Stücke ist ein Schulterschmuck, eine E",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 18: Eines der kostbarsten Stücke ist ein Schulterschmuck, eine E",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Man nennt ihn den Sächsischen Weißen.",
+  "sek": 3.5,
+  "zeigt": "Schlagzeile knallt: DER SÄCHSISCHE WEISSE – Zeile 19: Man nennt ihn den Sächsischen Weißen.",
+  "animation": "Schlagzeile knallt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Die Sammlung übersteht sogar den Krieg. Als Dresden 1945 in Trümmern liegt, sind die Schätze ausgelagert.",
+  "sek": 3.8,
+  "zeigt": "Zeitsprung-Uhr: 1945 – Zeile 20: Die Sammlung übersteht sogar den Krieg. Als Dresden neunzehn",
+  "animation": "Zeitsprung-Uhr",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.8,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 20) – Zeile 20: Die Sammlung übersteht sogar den Krieg. Als Dresden neunzehn",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Danach bringt die Sowjetunion sie nach Moskau. Erst 1958 kehren sie zurück nach Dresden.",
+  "sek": 3.4,
+  "zeigt": "Erzählkästchen: Moskau · bis 1958 – Zeile 21: Danach bringt die Sowjetunion sie nach Moskau. Erst neunzehn",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 21) – Zeile 21: Danach bringt die Sowjetunion sie nach Moskau. Erst neunzehn",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "2006 öffnet das Historische Grüne Gewölbe nach dem Wiederaufbau neu. Gesichert mit moderner Technik.",
+  "sek": 3.4,
+  "zeigt": "Zeitsprung-Uhr: 2006 – Zeile 22: Zweitausendsechs öffnet das Historische Grüne Gewölbe nach d",
+  "animation": "Zeitsprung-Uhr",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 22) – Zeile 22: Zweitausendsechs öffnet das Historische Grüne Gewölbe nach d",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Doch irgendjemand hat sich dieses Schloss sehr genau angesehen. Und eine Schwachstelle gefunden.",
+  "sek": 3.2,
+  "zeigt": "Schlagzeile knallt: DIE SCHWACHSTELLE – Zeile 23: Doch irgendjemand hat sich dieses Schloss sehr genau angeseh",
+  "animation": "Schlagzeile knallt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:schwachstelle",
+  "kapitel": 11
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Blitzlicht im Panel (Szene: Zeile 23) – Zeile 23: Doch irgendjemand hat sich dieses Schloss sehr genau angeseh",
+  "animation": "Blitzlicht",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 11
+ },
+ {
+  "satz": "Schon Tage vor der Tat bereiten die Täter ein vergittertes Fenster des Schlosses vor.",
+  "sek": 3.3,
+  "zeigt": "Extrablatt aus der Druckerpresse: DIE NACHT – Zeile 24: Schon Tage vor der Tat bereiten die Täter ein vergittertes F",
+  "animation": "Extrablatt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.3,
+  "zeigt": "2D-Grafik im Panel: DER PLAN – Zeile 24: Schon Tage vor der Tat bereiten die Täter ein vergittertes F",
+  "animation": "Der Plan (`motion` flow)",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.3,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 24: Schon Tage vor der Tat bereiten die Täter ein vergittertes F",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Sie schneiden ein Stück aus dem Eisengitter und kleben es provisorisch wieder an. Niemandem fällt etwas auf.",
+  "sek": 4.0,
+  "zeigt": "Erzählkästchen: ab 18. November 2019 · mehrere Fahrten nach Dresden – Zeile 25: Sie schneiden ein Stück aus dem Eisengitter und kleben es pr",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 4.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 25) – Zeile 25: Sie schneiden ein Stück aus dem Eisengitter und kleben es pr",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Sie besorgen zwei schnelle Autos, gekauft unter falschen Namen, dazu falsche Kennzeichen. Eines davon ist ein abgemeldeter Audi.",
+  "sek": 2.8,
+  "zeigt": "Erzählkästchen: gekauft unter falschen Namen – Zeile 26: Sie besorgen zwei schnelle Autos, gekauft unter falschen Nam",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 26) – Zeile 26: Sie besorgen zwei schnelle Autos, gekauft unter falschen Nam",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 26: Sie besorgen zwei schnelle Autos, gekauft unter falschen Nam",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Dann kommt die Nacht zum 25. November.",
+  "sek": 3.9,
+  "zeigt": "Zeitsprung-Uhr: 25.11.2019 – Zeile 27: Dann kommt die Nacht zum fünfundzwanzigsten November.",
+  "animation": "Zeitsprung-Uhr",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Wenige Minuten vor fünf legen zwei Männer an der Augustusbrücke Feuer an einem Stromverteiler.",
+  "sek": 3.4,
+  "zeigt": "Erzählkästchen: Augustusbrücke · kurz vor 5 Uhr – Zeile 28: Wenige Minuten vor fünf legen zwei Männer an der Augustusbrü",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 28) – Zeile 28: Wenige Minuten vor fünf legen zwei Männer an der Augustusbrü",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Die Laternen rund um das Schloss erlöschen. Und das Fenster liegt in einem Bereich, den die Sensoren nicht erfassen.",
+  "sek": 3.0,
+  "zeigt": "Erzählkästchen: Der Strom fällt aus – Zeile 29: Die Laternen rund um das Schloss erlöschen. Und das Fenster ",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "antwort:schwachstelle",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 29) – Zeile 29: Die Laternen rund um das Schloss erlöschen. Und das Fenster ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 29: Die Laternen rund um das Schloss erlöschen. Und das Fenster ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Aber die Kameras im Inneren laufen weiter.",
+  "sek": 3.9,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 30) – Zeile 30: Aber die Kameras im Inneren laufen weiter.",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Zwei Männer klettern durch das Fenster. Dunkel gekleidet, mit Taschenlampen in der Hand.",
+  "sek": 3.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 31) – Zeile 31: Zwei Männer klettern durch das Fenster. Dunkel gekleidet, mi",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 31: Zwei Männer klettern durch das Fenster. Dunkel gekleidet, mi",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Sie gehen zielsicher ins Juwelenzimmer. Als wüssten sie genau, wohin.",
+  "sek": 2.6,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 32) – Zeile 32: Sie gehen zielsicher ins Juwelenzimmer. Als wüssten sie gena",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 2.6,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 32: Sie gehen zielsicher ins Juwelenzimmer. Als wüssten sie gena",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Gegen 4:57 Uhr steigen die beiden ein. Und die Wachleute sehen sie auf ihren Bildschirmen.",
+  "sek": 3.8,
+  "zeigt": "Erzählkästchen: 4:57 Uhr – Zeile 33: Gegen vier Uhr siebenundfünfzig steigen die beiden ein. Und ",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 33) – Zeile 33: Gegen vier Uhr siebenundfünfzig steigen die beiden ein. Und ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Einer der Männer hebt eine Axt und schlägt auf die Vitrine ein. Wieder und wieder.",
+  "sek": 3.6,
+  "zeigt": "Panel zerbricht im Panel (Szene: Zeile 34) – Zeile 34: Einer der Männer hebt eine Axt und schlägt auf die Vitrine e",
+  "animation": "Panel zerbricht",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 34) – Zeile 34: Einer der Männer hebt eine Axt und schlägt auf die Vitrine e",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Die Wachleute gehen nicht hinein. Um 4:59 Uhr alarmieren sie die Polizei.",
+  "sek": 3.2,
+  "zeigt": "Erzählkästchen: 4:59 Uhr · Notruf – Zeile 35: Die Wachleute gehen nicht hinein. Um vier Uhr neunundfünfzig",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 35) – Zeile 35: Die Wachleute gehen nicht hinein. Um vier Uhr neunundfünfzig",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Im Juwelenzimmer reißen die Täter die Schmuckstücke heraus, die in der Vitrine festgenäht sind.",
+  "sek": 3.4,
+  "zeigt": "Taschenlampe im Panel (Szene: Zeile 36) – Zeile 36: Im Juwelenzimmer reißen die Täter die Schmuckstücke heraus, ",
+  "animation": "Taschenlampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 36: Im Juwelenzimmer reißen die Täter die Schmuckstücke heraus, ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Zum Schluss versprühen sie den Inhalt eines Feuerlöschers. Das Pulver soll ihre Spuren verwischen.",
+  "sek": 3.4,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 37) – Zeile 37: Zum Schluss versprühen sie den Inhalt eines Feuerlöschers. D",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 37: Zum Schluss versprühen sie den Inhalt eines Feuerlöschers. D",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Dann verschwinden sie durch dasselbe Fenster. Alles hat nur wenige Minuten gedauert.",
+  "sek": 3.0,
+  "zeigt": "Erzählkästchen: wenige Minuten · laut Anklage 4:57 bis 5:01 Uhr – Zeile 38: Dann verschwinden sie durch dasselbe Fenster. Alles hat nur ",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 38) – Zeile 38: Dann verschwinden sie durch dasselbe Fenster. Alles hat nur ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Die Polizei verpasst sie knapp. Als die ersten Streifen am Schloss ankommen, sind die Männer schon weg.",
+  "sek": 4.0,
+  "zeigt": "Blitzlicht im Panel (Szene: Zeile 39) – Zeile 39: Die Polizei verpasst sie knapp. Als die ersten Streifen am S",
+  "animation": "Blitzlicht",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 4.0,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 39: Die Polizei verpasst sie knapp. Als die ersten Streifen am S",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Wenig später brennt im Stadtteil Pieschen, auf der anderen Seite der Elbe, eine Tiefgarage.",
+  "sek": 3.4,
+  "zeigt": "Erzählkästchen: Dresden-Pieschen · Tiefgarage – Zeile 40: Wenig später brennt im Stadtteil Pieschen, auf der anderen S",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 40) – Zeile 40: Wenig später brennt im Stadtteil Pieschen, auf der anderen S",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Der Audi steht in Flammen, mehrere Autos daneben brennen mit. Zwei Bewohner atmen Rauch ein und werden verletzt.",
+  "sek": 2.8,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 41) – Zeile 41: Der Audi steht in Flammen, mehrere Autos daneben brennen mit",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 41) – Zeile 41: Der Audi steht in Flammen, mehrere Autos daneben brennen mit",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 41: Der Audi steht in Flammen, mehrere Autos daneben brennen mit",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Die Täter sind da schon in einem zweiten Auto unterwegs, getarnt als Taxi. Mit hoher Geschwindigkeit geht es Richtung Berlin.",
+  "sek": 3.1,
+  "zeigt": "2D-Grafik im Panel: DIE FLUCHT – Zeile 42: Die Täter sind da schon in einem zweiten Auto unterwegs, get",
+  "animation": "Panel-Grafik Karte (`motion` map)",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.1,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 42: Die Täter sind da schon in einem zweiten Auto unterwegs, get",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "",
+  "sek": 3.1,
+  "zeigt": "Kamera driftet weiter durchs Panel – Zeile 42: Die Täter sind da schon in einem zweiten Auto unterwegs, get",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 24
+ },
+ {
+  "satz": "Am Morgen geht die Nachricht um die Welt. Ein Einbruch wie im Film, mitten in Dresden.",
+  "sek": 3.6,
+  "zeigt": "Extrablatt aus der Druckerpresse: DIE SPUR NACH BERLIN – Zeile 43: Am Morgen geht die Nachricht um die Welt. Ein Einbruch wie i",
+  "animation": "Extrablatt",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Erzählkästchen: Morgen des 25. November – Zeile 43: Am Morgen geht die Nachricht um die Welt. Ein Einbruch wie i",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 43) – Zeile 43: Am Morgen geht die Nachricht um die Welt. Ein Einbruch wie i",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Die Polizei gründet eine Sonderkommission. Ihr Name: Epaulette.",
+  "sek": 2.2,
+  "zeigt": "Erzählkästchen: Soko „Epaulette“ – Zeile 44: Die Polizei gründet eine Sonderkommission. Ihr Name: Epaulet",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 2.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 44) – Zeile 44: Die Polizei gründet eine Sonderkommission. Ihr Name: Epaulet",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Die Ermittler sichern Spuren am ausgebrannten Auto, Splitter der Vitrine und ein herausgetrenntes Stück des Gitters.",
+  "sek": 3.8,
+  "zeigt": "Blitzlicht im Panel (Szene: Zeile 45) – Zeile 45: Die Ermittler sichern Spuren am ausgebrannten Auto, Splitter",
+  "animation": "Blitzlicht",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 45: Die Ermittler sichern Spuren am ausgebrannten Auto, Splitter",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Und sie finden DNA. Im zweiten Fluchtauto, das wenig später in Berlin auftaucht.",
+  "sek": 3.2,
+  "zeigt": "Schlagzeile knallt: DNA-TREFFER – Zeile 46: Und sie finden DNA. Im zweiten Fluchtauto, das wenig später ",
+  "animation": "Schlagzeile knallt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 46) – Zeile 46: Und sie finden DNA. Im zweiten Fluchtauto, das wenig später ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Die Spur führt nach Berlin-Neukölln. Zu mehreren jungen Männern aus der Großfamilie Remmo.",
+  "sek": 3.2,
+  "zeigt": "2D-Grafik im Panel: – Zeile 47: Die Spur führt nach Berlin-Neukölln. Zu mehreren jungen Männ",
+  "animation": "Fahndungsplakat dreht sich (`motion` flip)",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "antwort:wer",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 47: Die Spur führt nach Berlin-Neukölln. Zu mehreren jungen Männ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Die Familie ist der Polizei bekannt. Denn im März 2017 war in Berlin etwas Unglaubliches passiert.",
+  "sek": 3.8,
+  "zeigt": "Erzählkästchen: Bode-Museum · Berlin – Zeile 48: Die Familie ist der Polizei bekannt. Denn im März zweitausen",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 48) – Zeile 48: Die Familie ist der Polizei bekannt. Denn im März zweitausen",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Aus dem Bode-Museum verschwand eine riesige Goldmünze. 100 Kilogramm schwer, aus reinem Gold.",
+  "sek": 3.2,
+  "zeigt": "2D-Grafik im Panel: BERLIN · MÄRZ 2017 GOLDMÜNZE AUS DEM BODE-MUSEUM – Zeile 49: Aus dem Bode-Museum verschwand eine riesige Goldmünze. Hunde",
+  "animation": "Beute-Zahl (`motion` counter)",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "antwort:juwelen0",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 49: Aus dem Bode-Museum verschwand eine riesige Goldmünze. Hunde",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Sie wurde nie gefunden. Vermutlich wurde sie zerteilt und verkauft.",
+  "sek": 2.6,
+  "zeigt": "Erzählkästchen: vermutlich zerteilt und verkauft – Zeile 50: Sie wurde nie gefunden. Vermutlich wurde sie zerteilt und ve",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 2.6,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 50) – Zeile 50: Sie wurde nie gefunden. Vermutlich wurde sie zerteilt und ve",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Für diesen Diebstahl wurden zwei junge Männer aus derselben Familie verurteilt. Und die Ermittler fragen sich: Sind es wieder sie?",
+  "sek": 3.1,
+  "zeigt": "Erzählkästchen: Urteil zur Goldmünze – Zeile 51: Für diesen Diebstahl wurden zwei junge Männer aus derselben ",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:wieder",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.1,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 51) – Zeile 51: Für diesen Diebstahl wurden zwei junge Männer aus derselben ",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.1,
+  "zeigt": "Panel-Fahrt im Panel (Szene: Zeile 51) – Zeile 51: Für diesen Diebstahl wurden zwei junge Männer aus derselben ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Am 17. November 2020, fast genau ein Jahr nach der Tat, schlagen die Ermittler zu.",
+  "sek": 3.6,
+  "zeigt": "Blitzlicht im Panel (Szene: Zeile 52) – Zeile 52: Am siebzehnten November zweitausendzwanzig, fast genau ein J",
+  "animation": "Blitzlicht",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 52: Am siebzehnten November zweitausendzwanzig, fast genau ein J",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Mehr als 1600 Polizisten durchsuchen in Berlin 18 Orte. Wohnungen, Garagen und Autos.",
+  "sek": 3.2,
+  "zeigt": "2D-Grafik im Panel: 17. NOVEMBER 2020 POLIZISTEN · 18 ORTE IN BERLIN – Zeile 53: Mehr als sechzehnhundert Polizisten durchsuchen in Berlin ac",
+  "animation": "Beute-Zahl (`motion` counter)",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 3.2,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 53: Mehr als sechzehnhundert Polizisten durchsuchen in Berlin ac",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Drei Männer werden festgenommen. In den Monaten danach folgen weitere.",
+  "sek": 2.6,
+  "zeigt": "Blitzlicht im Panel (Szene: Zeile 54) – Zeile 54: Drei Männer werden festgenommen. In den Monaten danach folge",
+  "animation": "Blitzlicht",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "antwort:wieder",
+  "kapitel": 43
+ },
+ {
+  "satz": "",
+  "sek": 2.6,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 54: Drei Männer werden festgenommen. In den Monaten danach folge",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 43
+ },
+ {
+  "satz": "Doch von den Juwelen fehlt jede Spur.",
+  "sek": 3.9,
+  "zeigt": "Taschenlampe im Panel (Szene: Zeile 55) – Zeile 55: Doch von den Juwelen fehlt jede Spur.",
+  "animation": "Taschenlampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:juwelen",
+  "kapitel": 43
+ },
+ {
+  "satz": "Im Januar 2022 beginnt in Dresden der Prozess gegen sechs junge Männer.",
+  "sek": 3.0,
+  "zeigt": "Extrablatt aus der Druckerpresse: DER DEAL – Zeile 56: Im Januar zweitausendzweiundzwanzig beginnt in Dresden der P",
+  "animation": "Extrablatt",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Erzählkästchen: Landgericht Dresden · Januar 2022 – Zeile 56: Im Januar zweitausendzweiundzwanzig beginnt in Dresden der P",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 56) – Zeile 56: Im Januar zweitausendzweiundzwanzig beginnt in Dresden der P",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Der Vorwurf: schwerer Bandendiebstahl, Brandstiftung und besonders schwere Brandstiftung.",
+  "sek": 2.4,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 57) – Zeile 57: Der Vorwurf: schwerer Bandendiebstahl, Brandstiftung und bes",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.4,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 57: Der Vorwurf: schwerer Bandendiebstahl, Brandstiftung und bes",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Lange schweigen die meisten Angeklagten. Dann, im Dezember 2022, kommt die Wende.",
+  "sek": 3.0,
+  "zeigt": "Erzählkästchen: Dezember 2022 – Zeile 58: Lange schweigen die meisten Angeklagten. Dann, im Dezember z",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Regen, Schnee, Rauch im Panel (Szene: Zeile 58) – Zeile 58: Lange schweigen die meisten Angeklagten. Dann, im Dezember z",
+  "animation": "Regen, Schnee, Rauch",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Gericht, Anklage und Verteidigung loten eine Verständigung aus. Mildere Strafen gegen Geständnisse und die Rückgabe der Beute.",
+  "sek": 4.0,
+  "zeigt": "Panel zerbricht im Panel (Szene: Zeile 59) – Zeile 59: Gericht, Anklage und Verteidigung loten eine Verständigung a",
+  "animation": "Panel zerbricht",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 4.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 59) – Zeile 59: Gericht, Anklage und Verteidigung loten eine Verständigung a",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "In der Nacht zum 17. Dezember stellen Ermittler in Berlin 31 Einzelteile sicher. Nach Medienberichten in einer Anwaltskanzlei.",
+  "sek": 2.8,
+  "zeigt": "Erzählkästchen: Nacht zum 17. Dezember 2022 – Zeile 60: In der Nacht zum siebzehnten Dezember stellen Ermittler in B",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "antwort:juwelen",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Schlagzeile knallt: BEUTE TAUCHT AUF – Zeile 60: In der Nacht zum siebzehnten Dezember stellen Ermittler in B",
+  "animation": "Schlagzeile knallt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 60) – Zeile 60: In der Nacht zum siebzehnten Dezember stellen Ermittler in B",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Darunter der Bruststern des polnischen Weißen-Adler-Ordens und ein Hutschmuck. Manches ist schwer beschädigt, Steine sind herausgebrochen, und am Degen fehlt die Klinge.",
+  "sek": 3.4,
+  "zeigt": "Erzählkästchen: 31 Einzelteile · teils schwer beschädigt – Zeile 61: Darunter der Bruststern des polnischen Weißen-Adler-Ordens u",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 61) – Zeile 61: Darunter der Bruststern des polnischen Weißen-Adler-Ordens u",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.4,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 61: Darunter der Bruststern des polnischen Weißen-Adler-Ordens u",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Aber drei bedeutende Stücke fehlen. Die große Brustschleife der Königin Amalie Auguste. Und ein abgerissenes Teil eines Brillantkolliers.",
+  "sek": 2.8,
+  "zeigt": "2D-Grafik im Panel: WAS FEHLT – Zeile 62: Aber drei bedeutende Stücke fehlen. Die große Brustschleife ",
+  "animation": "Akten-Stapel (`motion` stack)",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:rest",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 62: Aber drei bedeutende Stücke fehlen. Die große Brustschleife ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Kamera driftet weiter durchs Panel – Zeile 62: Aber drei bedeutende Stücke fehlen. Die große Brustschleife ",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Und vor allem: die Epaulette mit dem Sächsischen Weißen.",
+  "sek": 2.4,
+  "zeigt": "Taschenlampe im Panel (Szene: Zeile 63) – Zeile 63: Und vor allem: die Epaulette mit dem Sächsischen Weißen.",
+  "animation": "Taschenlampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "antwort:diamant",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.4,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 63: Und vor allem: die Epaulette mit dem Sächsischen Weißen.",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Am 16. Mai 2023 fällt das Urteil. Fünf Männer werden verurteilt.",
+  "sek": 2.8,
+  "zeigt": "Erzählkästchen: 16. Mai 2023 – Zeile 64: Am sechzehnten Mai zweitausenddreiundzwanzig fällt das Urtei",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Schlagzeile knallt: VERURTEILT – Zeile 64: Am sechzehnten Mai zweitausenddreiundzwanzig fällt das Urtei",
+  "animation": "Schlagzeile knallt",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Ihre Strafen liegen zwischen 4 Jahren 4 Monaten und 6 Jahren 3 Monaten. Ein Angeklagter wird freigesprochen, er hat ein Alibi.",
+  "sek": 3.5,
+  "zeigt": "2D-Grafik im Panel: DAS URTEIL · 16.05.2023 – Zeile 65: Ihre Strafen liegen zwischen vier Jahren und vier Monaten un",
+  "animation": "Zeitungsgrafik",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.5,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 65: Ihre Strafen liegen zwischen vier Jahren und vier Monaten un",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.5,
+  "zeigt": "Kamera driftet weiter durchs Panel – Zeile 65: Ihre Strafen liegen zwischen vier Jahren und vier Monaten un",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Im April 2024 verwirft der Bundesgerichtshof die Revisionen von vier Verurteilten. Das Urteil ist rechtskräftig.",
+  "sek": 3.6,
+  "zeigt": "Erzählkästchen: Bundesgerichtshof · April 2024 – Zeile 66: Im April zweitausendvierundzwanzig verwirft der Bundesgerich",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Panel-Fahrt im Panel (Szene: Zeile 66) – Zeile 66: Im April zweitausendvierundzwanzig verwirft der Bundesgerich",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Seit August 2024 liegen die zurückgegebenen Stücke wieder im Grünen Gewölbe. Unrestauriert, mit den Spuren dieser Nacht.",
+  "sek": 4.0,
+  "zeigt": "Erzählkästchen: seit August 2024 · unrestauriert – Zeile 67: Seit August zweitausendvierundzwanzig liegen die zurückgegeb",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 4.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 67) – Zeile 67: Seit August zweitausendvierundzwanzig liegen die zurückgegeb",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen",
+   "zeit",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Das Kulturministerium hat die Juwelen inzwischen neu bewertet. Vor dem Einbruch rund 128 Millionen Euro, heute nur noch etwa sechsundsiebzig.",
+  "sek": 3.1,
+  "zeigt": "2D-Grafik im Panel: DER WERT – Zeile 68: Das Kulturministerium hat die Juwelen inzwischen neu bewerte",
+  "animation": "Zeitungsgrafik",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.1,
+  "zeigt": "Kamera fährt im Panel weiter, dann Sprung zum nächsten Panel – Zeile 68: Das Kulturministerium hat die Juwelen inzwischen neu bewerte",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.1,
+  "zeigt": "Kamera driftet weiter durchs Panel – Zeile 68: Das Kulturministerium hat die Juwelen inzwischen neu bewerte",
+  "animation": "Panel-Fahrt",
+  "inhalt": [
+   "geschehen",
+   "zahl"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Der Chefermittler vermutet bis heute, dass Insider den Tätern Informationen gegeben haben. Bewiesen ist das nicht.",
+  "sek": 3.8,
+  "zeigt": "Erzählkästchen: Vermutung · nicht bewiesen – Zeile 69: Der Chefermittler vermutet bis heute, dass Insider den Täter",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "frage:insider",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 69) – Zeile 69: Der Chefermittler vermutet bis heute, dass Insider den Täter",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Und der Sächsische Weiße? Er bleibt verschwunden. Vielleicht versteckt. Vielleicht längst zerschnitten.",
+  "sek": 3.0,
+  "zeigt": "Schlagzeile knallt: VERSCHWUNDEN – Zeile 70: Und der Sächsische Weiße? Er bleibt verschwunden. Vielleicht",
+  "animation": "Schlagzeile knallt",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "teaser:weisser",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.0,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 70) – Zeile 70: Und der Sächsische Weiße? Er bleibt verschwunden. Vielleicht",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Was glaubst du: Taucht der Sächsische Weiße jemals wieder auf? Schreib es in die Kommentare.",
+  "sek": 3.6,
+  "zeigt": "Sprechblase: ['Taucht er je wieder auf?', 'Schreib es in die Kommentare!'] – Zeile 71: Was glaubst du: Taucht der Sächsische Weiße jemals wieder au",
+  "animation": "Sprechblase",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 3.6,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 71) – Zeile 71: Was glaubst du: Taucht der Sächsische Weiße jemals wieder au",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "Abonniere den Kanal und aktiviere die Glocke. Bis zur nächsten Nacht.",
+  "sek": 2.8,
+  "zeigt": "Erzählkästchen: Abonnieren · Glocke aktivieren – Zeile 72: Abonniere den Kanal und aktiviere die Glocke. Bis zur nächst",
+  "animation": "Erzählkästchen",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "exakt",
+  "neugier": "",
+  "kapitel": 56
+ },
+ {
+  "satz": "",
+  "sek": 2.8,
+  "zeigt": "Flackernde Lampe im Panel (Szene: Zeile 72) – Zeile 72: Abonniere den Kanal und aktiviere die Glocke. Bis zur nächst",
+  "animation": "Flackernde Lampe",
+  "inhalt": [
+   "geschehen"
+  ],
+  "genauigkeit": "schema",
+  "neugier": "",
+  "kapitel": 56
+ }
+]

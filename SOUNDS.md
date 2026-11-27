@@ -41,3 +41,5 @@ Gesäubert: Hochpass 60 Hz, Anfangsstille entfernt, −20 LUFS. Nur passend zum 
 | clock_tick | Zeitsprung-Uhr | sound-bibliothek (goldsmith: metronome-ticking-01) | CC0 |
 | glass_shatter_01 | Panel zerbricht | sound-bibliothek (SFXMint, Hugging Face flreey/sfxmint-cc0-sound-effects) | CC0 |
 | machine_engine | Extrablatt (Druckmaschine, leise) | sound-bibliothek (goldsmith: mechanical-engine-39) | CC0 |
+| newspaper-slap-01 | Schlagzeile knallt (Gemini-Casting 27.11.2026: PREMIUM, ersetzt impact-slam-35 = CHEAP) | Freesound 67034 „Newspaper_1.wav“, waterboy920 | CC0 |
+| book-drop-08 | trockener Treffer (Gemini-Casting 27.11.2026: PREMIUM) | Freesound 484904 „Book Drop - 8“, SpaceJoe | CC0 |

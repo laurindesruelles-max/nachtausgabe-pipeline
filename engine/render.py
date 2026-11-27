@@ -23,6 +23,8 @@ _spec = importlib.util.spec_from_file_location("episode", os.path.join(EP_DIR, "
 EP = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(EP)
 P, CHAPTERS, PRE = EP.P, EP.CHAPTERS, EP.PRE
 CH_PAUSE = getattr(EP, "CH_PAUSE", 2.2)
+# Schlagzeilen-Sound: impact-slam-35 fiel im Gemini-Casting 22.11. als CHEAP durch; newspaper-slap-01 = PREMIUM (Casting 27.11.2026)
+HEADLINE_SFX = getattr(EP, "HEADLINE_SFX", "impact-slam-35")
 
 
 
@@ -43,10 +45,6 @@ def _audiokit():
 
 def main(out_mp4, stills=None):
     order = list(range(1, EP.TITLE_AFTER + 1)) + ["T"] + list(range(EP.TITLE_AFTER + 1, EP.N_PANELS + 1))
-    imgs = []
-    for k in order:
-        imgs.append(title_panel() if k == "T" else cv2.resize(np.array(Image.open(f"{ROOT}/img/p{k:02d}.png").convert("RGB")), (PW, PH), interpolation=cv2.INTER_AREA))
-    strip, rects = build_strip(imgs)
     slot = {k: i for i, k in enumerate(order)}
     page_of = lambda k: slot[k] // 6
 
@@ -68,6 +66,27 @@ def main(out_mp4, stills=None):
             nxt = order[len(shots)]
             t += 0.55 if page_of(shots[-1]["k"]) == page_of(nxt) else float(getattr(EP, "FLIP_GAP", 1.25))
     T_END = t + 4.0
+    # 2D-Motion-Clips (Pflicht seit 25.11.2026): MOTION = {zeile: (baustein, props)} in episode.py.
+    # Der Clip zeigt selbst ein Panel auf der Comicseite; im Seitenstreifen steht sein Schlussbild.
+    MOTION = getattr(EP, "MOTION", {})
+    MK = {}
+    _m0 = lambda s_: (s_["v0"] - 0.15) if s_["k"] in CHAPTERS else (s_["start"] + 0.05)   # nach dem Extrablatt starten
+    if MOTION:
+        import motion_na as MO
+        for s_ in shots:
+            if s_["k"] in MOTION:
+                comp, props = MOTION[s_["k"]]
+                MK[s_["k"]] = (MO.clip(comp, props, len=round(max(4.2, s_["end"] - _m0(s_) + 0.4), 1)), s_)
+        MO.build(ROOT)
+    imgs = []
+    for k in order:
+        if k == "T": imgs.append(title_panel())
+        elif k in MK:
+            K_ = MK[k][0]; L_ = MO._JOBS[K_]["len"]
+            imgs.append(cv2.resize(np.array(MO.frame(K_, L_ - 0.1).convert("RGB")), (PW, PH), interpolation=cv2.INTER_AREA))
+        else:
+            imgs.append(cv2.resize(np.array(Image.open(f"{ROOT}/img/p{k:02d}.png").convert("RGB")), (PW, PH), interpolation=cv2.INTER_AREA))
+    strip, rects = build_strip(imgs)
     print("Länge:", round(T_END, 1), "s =", int(T_END // 60), "min", int(T_END % 60), "s")
     json.dump([{k_: v_ for k_, v_ in x.items()} for x in shots], open(f"{ROOT}/shots.json", "w"))
 
@@ -129,7 +148,15 @@ def main(out_mp4, stills=None):
             if a_ < t < b_:
                 fa = base_frame(t, fi, view_of(shots[i_], 0.07)); fb = base_frame(t, fi, view_of(shots[i_ + 1]))
                 return page_flip(fa, fb, (t - a_) / (b_ - a_))
-        return base_frame(t, fi, camera(t))
+        fr = base_frame(t, fi, camera(t))
+        for k_, (K_, s_) in MK.items():
+            a0, a1 = _m0(s_), s_["end"] + 0.1
+            if a0 <= t <= a1:
+                al = min(1.0, (t - a0) / 0.35, (a1 - t) / 0.3)
+                al = al * al * (3 - 2 * al)
+                fc = np.array(MO.frame(K_, t - a0).convert("RGB"), np.float32)
+                fr = (fr.astype(np.float32) * (1 - al) + fc * al).astype(np.uint8)
+        return fr
     def base_frame(t, fi, cam):
         cx, cy, s = cam
         cx += 5 * math.sin(t * 0.7) / s * 2; cy += 4 * math.sin(t * 0.9 + 1) / s * 2
@@ -160,7 +187,6 @@ def main(out_mp4, stills=None):
         for ta in stills: Image.fromarray(frame_at(ta)).save(f"{ROOT}/stills/full_{ta:06.1f}.png")
         return
 
-    import os
     AUDIO_ONLY = os.environ.get("AUDIO_ONLY") == "1"
     n = int(T_END * FPS)
     if AUDIO_ONLY: n = 0
@@ -186,7 +212,7 @@ def main(out_mp4, stills=None):
     def _add(name, t, g, **kw): _ev.append((t, name, g, kw))
     for i, s in enumerate(shots):
         if s["k"] == "T":
-            _add("logo-reveal-01", s["start"] - 0.1, 0.45); _add("cinematic-boom-01", s["start"] + 0.05, 0.45); continue
+            _add("logo-reveal-01", s["start"] - 0.1, 0.45); _add("cinematic-boom-01", s["start"] + 0.05, float(os.environ.get("TITLE_BOOM", "0.45"))); continue
         for name, at, g in P[s["k"]]["sfx"]:
             _add(name, s["v0"] + at, g * 0.5, fade_out=0.15)
         if P[s["k"]].get("rain"):
@@ -197,20 +223,32 @@ def main(out_mp4, stills=None):
             if e["type"] == "flashlight":
                 _add("lighter-flick-01", e["t0"], 0.22); _add("scroll-unroll-01", e["t0"] + e.get("dur", 3.0), 0.2)
             elif e["type"] == "shatter":
-                _add("glass-clink-01", e["t0"] + 0.05, 0.14); _add("glass_shatter_01", e["t0"] + 0.6, 0.38)
+                _add("glass-clink-01", e["t0"] + 0.05, 0.14); _add("glass_shatter_01", e["t0"] + 0.6, 0.28)
         if i + 1 < len(shots):
             if page_of(s["k"]) != page_of(shots[i + 1]["k"]): _add("paper-fabric-card-flip-06", s["end"] + 0.15, 0.55)
-            else: _add("short-video-whoosh-01", s["end"] + 0.05, 0.12)
+            elif os.environ.get("PANEL_WHOOSH") == "1": _add("short-video-whoosh-01", s["end"] + 0.05, 0.12)
+        if s["k"] in MK:
+            for t_, n_, g_, d_ in MO.sounds(MK[s["k"]][0], _m0(s)):
+                n_ = HEADLINE_SFX if n_ == "impact-slam-35" else n_
+                if n_ in ("clock_tick", "door-knock-01"): continue   # Gemini 27.11.: "Arcade-Pling"/"Plopp" bei Zähler und Karten-Pins -> raus
+                _add(n_, t_, g_ * float(os.environ.get("MO_GAIN", "0.9")), **({"max_len": d_, "fade_out": 0.2} if d_ else {}))
     for o in overlays:
         if o.kind == "headline":
-            _add("impact-slam-35", o.t0, 0.7); _add("reveal-impact-01", o.t0 + 0.02, 0.45); _add("cinematic-boom-01", o.t0, 0.3)
+            _add(HEADLINE_SFX, o.t0, 0.7); _add("reveal-impact-01", o.t0 + 0.02, 0.45); _add("cinematic-boom-01", o.t0, 0.3)
         elif o.kind == "wanted":
             _add("paper-fabric-card-flip-06", o.t0, 0.3); _add("reveal-impact-01", o.t0 + 0.05, 0.25)
         elif o.kind == "clock":
-            _add("clock_tick", o.t0 + 0.2, 0.2, fade_out=0.4, max_len=min(o.t1 - o.t0, 4.0))
+            _add("clock_tick", o.t0 + 0.2, 0.12, fade_out=0.4, max_len=min(o.t1 - o.t0, 4.0))
         elif o.kind == "extrablatt":
-            _add("machine_engine", o.t0, 0.12, fade_in=0.2, fade_out=0.6, max_len=2.6); _add("short-video-whoosh-01", o.t0 + 0.15, 0.22)
-            _add("paper-fabric-card-flip-06", o.t0 + 1.25, 0.35); _add("cinematic-boom-01", o.t0 + 1.3, 0.15)
+            _add("machine_engine", o.t0, 0.12, fade_in=0.2, fade_out=0.6, max_len=2.6); _add("short-video-whoosh-01", o.t0 + 0.15, 0.12)
+            _add("paper-fabric-card-flip-06", o.t0 + 1.25, 0.22); _add("cinematic-boom-01", o.t0 + 1.3, 0.15)
+    _ev.sort(key=lambda e: e[0]); _last = -99.0; _keep = []
+    for e in _ev:   # Whoosh nur bei echtem Bildwechsel, mindestens 6 s Abstand (Laurin 24.11.2026)
+        if e[1] == "short-video-whoosh-01":
+            if e[0] - _last < 6.0: continue
+            _last = e[0]
+        _keep.append(e)
+    _ev[:] = _keep
     AK0 = _audiokit()
     kw_of = {}
     evs = [(t, n, g) for t, n, g, kw in _ev]
@@ -282,17 +320,30 @@ def main(out_mp4, stills=None):
     if s13:
         env(s13["start"] - 0.6, s13["start"], 1.0, 0.6); hold(s13["start"], s13["v1"] - 1.5, 0.6)
         env(s13["v1"] - 1.5, s13["v1"] + 0.5, 0.6, 1.35); env(s13["v1"] + 0.5, s13["v1"] + 3.0, 1.35, 1.0)
+    TG = float(os.environ.get("TITLE_GAIN", getattr(EP, "TITLE_GAIN", 1.0)))
+    for s_ in shots:   # Titeltafel = lautester Moment (earshot: "loudest 3 s" >= 3,5 LU über dem Mittel)
+        if s_["k"] == "T" and TG > 1.0:
+            env(s_["start"] - 1.0, s_["start"], 1.0, TG); hold(s_["start"], s_["v1"] - 0.3, TG); env(s_["v1"] - 0.3, s_["end"] + 1.2, TG, 1.0)
     hits = sorted(set([o.t0 + 0.14 for o in overlays if o.kind in ("stamp", "headline")] + [s["start"] + 0.1 for s in shots if s["k"] in CHAPTERS]))
     for h in hits:
-        env(h - 1.8, h, 1.0, 1.45); env(h, h + 1.6, 1.45, 1.0)
+        SW = float(os.environ.get("SWELL", "1.45")); env(h - 1.8, h, 1.0, SW); env(h, h + 1.6, SW, 1.0)
     # Ducking: unter der Stimme etwas leiser, in Sprechpausen voller
     act = (np.abs(voice).max(axis=1) > 0.02).astype(np.float32)
     k = int(0.25 * SR); act = np.convolve(act, np.ones(k, np.float32) / k, mode="same")
-    duck = 1.0 - 0.3 * np.clip(act * 3, 0, 1)
+    duck = 1.0 - float(os.environ.get("DUCK", getattr(EP, "DUCK", 0.3))) * np.clip(act * 3, 0, 1)
     buf += music * (g * duck)[:, None]
     buf = np.tanh(buf * 1.1) * 0.95
     raw = buf[:int(T_END * SR)].astype(np.float32).tobytes()
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-", "-af", "loudnorm=I=-14:TP=-1.5", f"{ROOT}/full_a.wav"], input=raw)
+    if os.environ.get("MASTER_LINEAR") == "1":
+        # Master per Messung + linearem Gain statt dynamischem Einmal-loudnorm (doku-ohren: das drückt die Dynamik platt)
+        pre = os.environ.get("MASTER_EQ", "equalizer=f=3000:t=q:w=1:g=1.5,equalizer=f=9000:t=q:w=1:g=2.5")
+        m = subprocess.run(["ffmpeg", "-hide_banner", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-", "-af", pre + ",loudnorm=I=-" + os.environ.get("MASTER_I", "14") + ":TP=-3.5:print_format=json", "-f", "null", "-"], input=raw, capture_output=True).stderr.decode()
+        js = json.loads(m[m.rindex("{"):m.rindex("}") + 1])
+        af = (pre + f",loudnorm=I=-{os.environ.get('MASTER_I', '14')}:TP=-3.5:LRA=20:linear=true:measured_I={js['input_i']}:measured_TP={js['input_tp']}:measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}"
+              + ",alimiter=limit=" + os.environ.get("MASTER_LIM", "0.64") + ":level=false")
+    else:
+        af = os.environ.get("MASTER_AF", "loudnorm=I=-14:TP=-1.5")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "2", "-i", "-", "-af", af, f"{ROOT}/full_a.wav"], input=raw)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{ROOT}/full_v.mp4", "-i", f"{ROOT}/full_a.wav", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", out_mp4])
     if AK0 is not None:
         import scipy.io.wavfile as _wf
